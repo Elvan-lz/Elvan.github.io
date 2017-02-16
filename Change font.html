@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Elvan-lz.GitHub.io by Elvan-lz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>选字</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding:0;
+    }               
+
+    html,body{
+      width: 100%;
+      height: 100%;
+      font-size: calc(width / 10);
+      background-image: url(http://img4.duitang.com/uploads/item/201511/21/20151121140743_K5a4y.thumb.700_0.jpeg);
+      background-size: 100% 100%;
+    }
+    .warp{
+      width: 100%;
+      height: 100%;
+      /*border:1px solid gray;*/
+      text-align: center;
+      margin: 0 auto;
+      position: relative;
+    }
+    span:nth-child(1){
+      position: absolute;
+      left: 1.5rem;
+    }
+    span:nth-child(2){
+      position: absolute;
+      right: 1.5rem;
+    }
+    span{
+      font-size: 1.2rem;
+      top: 1.5rem;
+      color: white;
+    }
+    .dazi{
+      font-size: 10rem;
+      position: relative;
+      top: 15%;
+      color:#ddd;
+    }
+    p{
+      width: 70%;
+      font-size: 1.5rem;
+      margin: 0 auto;
+      position: relative;
+      top: 20%;
+      color: #fff;
+      /*background-color: red;*/
+    }
+    .dawuzi{
+      position: absolute;
+      bottom: calc(15% + 1rem);
+      left: calc(50% - 9.25rem);
+    }
+    .wuzi{
+      font-size: 3.5rem;
+      display: inline-block;
+      cursor: pointer;
+      /*border-bottom: 2px solid gray;*/
+    }
+    .hr{
+      width: 100%;
+      height: 0;
+      border: 1px solid gray;
+      position: absolute;
+      bottom: calc(1% + 4rem);
+    }
+    button{
+      width: 5rem;
+      height: 2.5rem;
+      border-radius: 0.5rem;
+      font-size: 1.5rem;
+      color: white;
+      background-color:green;
+      position: absolute;
+      bottom: 2%;
+      left: calc(50% - 2.5rem);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="warp">
+    <span>时间剩余：60秒</span>
+    <span>得分：0</span>
+    <div class="dazi">燚</div>
+    <p>根据字体颜色选择下面相对应的颜色字体</p>
+    <div class="dawuzi">
+      <div class="wuzi"></div>
+      <div class="wuzi"></div>
+      <div class="wuzi"></div>
+      <div class="wuzi"></div>
+      <div class="wuzi"></div>
+    </div>
+    
+    <div class="hr"></div>
+    <button id="start">开始</button>
+  </div>
+
+
+  <script type="text/javascript">
+
+    var span = document.getElementsByTagName('span');
+    var dazi = document.querySelector('.dazi');
+    var wuzi = document.querySelectorAll('.wuzi');
+    var start = document.getElementById('start');
+    // 剩余时间
+    var T = null;
+    // var countdown = 60;
+
+    var bol = true;
+    var aa = null;
+
+
+    // 得分
+    var score = 0;
+    
+    function countdowntime(){
+      // var countdown = 60;
+      clearInterval(T);   // 每次重新开始之前清除一遍计时器
+      T = setInterval(function(){
+        countdown--;
+        span[0].innerHTML = "时间剩余："+countdown+"秒";
+        if (countdown<=0) {
+          clearInterval(T);
+          bol = true;
+          wuzi[0].onclick = null;
+          wuzi[1].onclick = null;
+          wuzi[2].onclick = null;
+          wuzi[3].onclick = null;
+          wuzi[4].onclick = null;
+        }
+      },1000);
+    }
+    
+
+
+    function changefont(){
+
+      // 大字
+      var daziarr = ["红","黄","蓝","绿","白"];
+      var dazicolor = ["red","yellow","blue","green","white"];
+      var daziarrrandom = Math.floor(Math.random()*daziarr.length);
+      dazi.innerHTML = daziarr[daziarrrandom];
+      var daziarrcolor = Math.floor(Math.random()*dazicolor.length);
+      dazi.style.color = dazicolor[daziarrcolor];
+
+
+
+      // 五字
+      var wuziarr = daziarr.sort(function(){return Math.random()>0.5});
+      var wuziarrcolor = dazicolor.sort(function(){return Math.random()>0.5});
+      // daziarr.sort(function(){return Math.random()>0.5});
+      console.log(daziarr);
+      console.log(wuziarrcolor);
+      for(i=0;i<wuziarr.length;i++){
+        wuzi[i].innerHTML = wuziarr[i];
+        wuzi[i].style.color = wuziarrcolor[i];
+      }
+    }
+    
+    
+    
+
+
+    // 点击判断
+    function game(){
+
+      for(var i = 0 ; i < wuzi.length ; i ++){
+        wuzi[i].onclick = function wuziclick(){
+          if(dazi.style.color == "red" && this.innerText == "红"){
+            aa = this;
+            score += 1;
+            span[1].innerHTML = "得分："+score;
+          }
+          else if(dazi.style.color == "yellow" && this.innerText == "黄"){
+            aa = this;
+            score += 1;
+            span[1].innerText = "得分："+score;
+          }
+          else if(dazi.style.color == "blue" && this.innerText == "蓝"){
+            aa = this;
+            score += 1;
+            span[1].innerHTML = "得分："+score;
+          }
+          else if(dazi.style.color == "green" && this.innerText == "绿"){
+            aa = this;
+            score += 1;
+            span[1].innerHTML = "得分："+score;
+          }
+          else if(dazi.style.color == "white" && this.innerText == "白"){
+            aa = this;
+            score += 1;
+            span[1].innerHTML = "得分："+score;
+          }
+          else{
+            score -= 1;
+            span[1].innerHTML = "得分："+score;
+          }
+          changefont();
+
+        }
+      }
+    }
+    
+
+
+    // var wuzionclick = null;
+
+    // var bol = true;
+    // start.onclick = function(){
+    //  if (bol) {
+    //    countdown = 60;
+    //    score = 0;
+    //    span[0].innerHTML = "时间剩余："+countdown+"秒";
+    //    span[1].innerHTML = "得分："+score;
+    //    countdowntime();
+    //    game();
+    //    changefont();
+    //    start.style.width = "9rem";
+    //    start.style.fontSize = "1.8rem";
+    //    start.style.left = "calc(50% - 4.25rem)";
+    //    start.innerHTML = "重新开始";
+    //  }
+    //  bol = false;
+
+    // }
+
+
+
+
+    start.onclick = function(){
+      // if {
+        countdown = 60;
+        score = 0;
+        span[0].innerHTML = "时间剩余："+countdown+"秒";
+        span[1].innerHTML = "得分："+score;
+        countdowntime();
+        game();
+        changefont();
+        start.style.width = "9rem";
+        start.style.fontSize = "1.8rem";
+        start.style.left = "calc(50% - 4.25rem)";
+        start.innerHTML = "重新开始";
+      // }
+      // bol = false;
+
+    }
+
+
+
+
+
+
+    // 推荐计时器在使用之前清除掉
+    
+  </script>
+
+
+
+  
+  </body>
+</html>
