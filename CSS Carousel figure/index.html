@@ -19,7 +19,7 @@
 			width: calc(100% * 4);
 			height: 100%;
 			position: absolute;
-			animation: animation1 20s infinite alternate;
+			animation: animation1 16s infinite alternate;
 		}
 		.inner img{
 			width: 25%;
@@ -27,10 +27,70 @@
 			float: left;
 		}
 		@keyframes animation1 {
-			0%,25%{ left: 0% }
-			30%,55%{ left: -100% }
-			60%,85%{ left: -200% }
-			90%,100%{ left: -300% }
+			0%,25%{ left: 0%; }
+			30%,55%{ left: -100%; }
+			60%,85%{ left: -200%; }
+			90%,100%{ left: -300%; }
+		}
+
+		/*淡入淡出效果*/
+		.wrap2{
+			width: 900px;
+			height: 600px;
+			position: relative;
+			margin: 0 auto;
+			margin-top: 20px;
+			/*overflow: hidden;*/
+		}
+		.inner2,.inner2 img{
+			width: 100%;
+			height: 100%;
+		}
+		.inner2 img{
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.img1{
+			opacity: 1;
+			animation: animation2_1 16s infinite alternate;
+		}
+		.img2{
+			opacity: 0;
+			animation: animation2_2 16s infinite alternate;
+		}
+		.img3{
+			opacity: 0;
+			animation: animation2_3 16s infinite alternate;
+		}
+		.img4{
+			opacity: 0;
+			animation: animation2_4 16s infinite alternate;
+
+		}
+		@keyframes animation2_1 {
+			0%,25%{ opacity: 1; }
+			30%,55%{ opacity: 0; }
+			60%,85%{ opacity: 0; }
+			90%,100%{ opacity: 0;}
+		}
+		@keyframes animation2_2 {
+			0%,25%{ opacity: 0; }
+			30%,55%{ opacity: 1; }
+			60%,85%{ opacity: 0; }
+			90%,100%{ opacity: 0;}
+		}
+		@keyframes animation2_3 {
+			0%,25%{ opacity: 0; }
+			30%,55%{ opacity: 0; }
+			60%,85%{ opacity: 1; }
+			90%,100%{ opacity: 0;}
+		}
+		@keyframes animation2_4 {
+			0%,25%{ opacity: 0; }
+			30%,55%{ opacity: 0; }
+			60%,85%{ opacity: 0; }
+			90%,100%{ opacity: 1;}
 		}
 	</style>
 </head>
@@ -42,6 +102,15 @@
 		<img src="images/2.jpg">
 		<img src="images/3.jpg">
 		<img src="images/4.jpg">
+	</div>
+</div>
+
+<div class="wrap2">
+	<div class="inner2">
+		<img class="img1" src="images/1.jpg">
+		<img class="img2" src="images/2.jpg">
+		<img class="img3" src="images/3.jpg">
+		<img class="img4" src="images/4.jpg">
 	</div>
 </div>
 
