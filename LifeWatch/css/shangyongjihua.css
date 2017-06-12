@@ -1,0 +1,455 @@
+body{
+	min-width: 320px;
+}
+.box{
+	position: relative;
+}
+.backtop{
+	position: fixed;
+	bottom: 10%;
+	right: 10%;
+}
+.backtop img{
+	width: 50px;
+	height: 50px;
+}
+input{
+	outline: none;
+	margin-left: 5px;
+	border: 1px solid #d4d4d4;
+	padding: 0 5px 0 5px;
+}
+#jly h4{
+	color: #000;
+	text-align: center;
+}
+.box h3{
+	text-align: center;
+	color: #00c7a4;
+	font-size: 30px;
+}
+.row .hengxian{
+	width: 47px;
+	height: 3px;
+	background: #00c7a4;
+	margin: 0 auto;
+}
+
+
+#myTab{
+	border: 0;
+	text-align: center;	
+	margin: 0 auto;
+}
+#myTab li{
+	float: none;
+	display: inline-block;
+}
+#myTab li a{
+	border: 0;
+	padding: 10px 18px;
+}
+.jhhr{
+	margin-top: 1px;
+}
+p{
+	font-size: 14px;
+	color: #666;
+}
+.titles{
+	color: #20D9AB;
+	font-size: 20px;
+}
+
+
+
+h4{
+	text-align: center;
+}
+#myTab a{
+	color: #000000;
+}
+
+
+.jly_left,.jly_right{
+	width: 50%;
+	float: left;
+}
+.jlyjh:after{
+     content:" ";        
+     display:block;        
+     height:0;        
+     clear:both;        
+     visibility:hidden;        
+}
+.jly_right{
+	padding-left: 3%;
+}
+.jly_img{
+	width: 92%;
+	overflow: hidden;
+}
+.jly_img img{
+	width: 100%;
+}
+.form1{
+	border: 1px solid #ddd;
+	overflow: hidden;
+}
+
+/*联系方式*/
+.lxfs{
+	text-align: center;
+	background: #20D9AB;
+	color: #fff;
+	padding: 2px;
+}
+.lxfs_s{
+	padding-left: 4%;
+}
+.lxfs{
+	margin-bottom: 10px;
+}
+.lxfs_s li{
+	text-align: left;
+}
+.lxfss{
+	display: inline-block;
+	width: 64px;
+	margin-bottom: 5px;
+}
+.tarea{
+	float: left;
+}
+textarea{
+	width: 50%;
+	min-width: 155px;
+	max-width: 70%;
+	outline: none;
+	margin-left: 5px;
+	border: 1px solid #d4d4d4;
+	padding: 0 5px 0 5px;
+}
+.lxfs_s .sunmitS{
+	display: block;
+	text-align: center;
+}
+.submitT{
+	color: #fff;
+	display: inline-block;
+	border: 0;
+	width: 72px;
+	padding: 1%;
+	background: #20D9AB;
+	margin: 20px 0 20px;
+}
+/*联系方式*/
+
+/*系统组成*/
+.xtzc{
+	margin: 50px 0 50px;
+}
+.xtzc:after{
+     content:" ";        
+     display:block;        
+     height:0;
+     clear:both;
+     visibility:hidden;        
+}
+
+.xtzc_left,.xtzc_right{
+	float: left;
+}
+.xtzc_left{
+	width: 30%;
+	overflow: hidden;
+}
+.xtzc_left img{
+	width: 100%;
+}
+.xtzc_right{
+	width: 70%;
+	padding-left: 3%;
+}
+/*系统组成*/
+
+/*系统介绍*/
+.xtjs:after{
+     content:" ";        
+     display:block;        
+     height:0;        
+     clear:both;        
+     visibility:hidden;        
+}
+.xtjs_s{
+	width: 100%;
+}
+.xtjss{
+	display: inline-block;
+	width: 49%;
+}
+.xtjss:nth-child(2n){
+	padding-left: 2%;
+}
+.xtjss:first-child,.xtjss:nth-child(3){
+	padding-right: 2%;
+}
+
+.xtjss_img,.xtjss_p{
+	float: left;
+}
+.xtjss_img{
+	width: 30%;
+	overflow: hidden;
+}
+.xtjss_img img{
+	width: 100%;
+}
+.xtjss_p{
+	width: 70%;
+	padding-left: 3%;
+}
+.zhiwei{
+	font-size: 14px;
+	margin: 10px 0 10px;
+}
+.zhiweims{
+	font-size: 12px;
+}
+/*系统介绍*/
+
+
+
+
+/*分享*/
+.bdshare-button-style0-16 a{
+	margin: 6px 0 0 0;
+}
+.bdshare-button-style0-16{
+	position: fixed;
+    left: 0;
+    top: 220px;
+    width: 29px;
+    background: #cecece;
+    border-radius: 3px;
+}
+/*分享 end*/
+
+/*客服*/
+.fixed{
+	background: #fff;
+	display: none;
+}
+#fixed{
+	right: 0;
+}
+
+.gm{
+	position: fixed;
+	right: 0;
+	top: 30%;
+	width: 29px;
+	padding: 6px;
+	color: #fff;
+	background: #20D9AB;
+	border-radius: 3px;
+	z-index: 2;
+}
+.gm:hover{
+	/*display: none;*/
+}
+.gm:hover .fixed{
+	display: block;
+}
+/*客服 end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@media (min-width: 992px){
+	
+}*/
+@media (max-width: 992px) and (min-width: 690px){
+	.backtop img{
+		width: 45px;
+		height: 45px;
+	}
+	#myTab li a{
+		font-size: 13px;
+	}
+	.jly_left,.jly_right,.jly_img,.xtzc,.xtzc_left,.xtzc_right,.xtjs{
+		width: 100%;
+		padding: 3%;
+	}
+	.xtjss{
+	padding-left: 2%;
+	}
+	.titles:nth-child(1),.titles:nth-child(3),.titles:nth-child(4){
+	margin-bottom: 0;
+	}
+	p{
+		font-size: 13px;
+		margin: 0;
+	}
+	.titles{
+		font-size: 16px;
+	}
+	.zhiwei{
+		margin: 0 0 5px;
+		font-weight: bold;
+	}
+	.zhiwei,.zhiweims{
+		margin: 0;
+	}
+}
+@media (max-width: 690px) and (min-width: 460px){
+	.backtop img{
+		width: 40px;
+		height: 40px;
+	}
+	.nav>li{
+		width: 24%;
+		text-align: center;
+	}
+	.jly_left,.jly_right,.jly_img,.xtzc,.xtzc_left,.xtzc_right,.xtjs,.xtjss{
+		width: 100%;
+		padding: 3%;
+	}
+	.xtjss{
+	padding-left: 2%;
+	}
+	.titles:nth-child(1),.titles:nth-child(3),.titles:nth-child(4){
+	margin-bottom: 0;
+	}
+	#myTab li a{
+		padding: 10px 5px;
+		font-size: 12px;
+	}
+	.xtzc{
+	margin: 30px 0 30px;
+	}
+	p{
+		font-size: 12px;
+		margin: 0;
+	}
+	.titles{
+		font-size: 16px;
+	}
+	.zhiwei{
+		font-size: 14px;
+		font-weight: bold;
+		margin: 0 0 10px;
+	}
+	.zhiweims{
+		margin: 4px;
+		line-height: 16px;
+	}
+}
+@media (max-width: 460px) and (min-width: 320px){
+	body{
+		font-size: 12px;
+	}
+	.backtop img{
+		width: 35px;
+		height: 35px;
+	}
+	.nav>li{
+		width: 24%;
+		text-align: center;
+	}
+	.jly_left,.jly_right,.jly_img,.xtzc,.xtzc_left,.xtzc_right,.xtjs,.xtjss{
+		width: 100%;
+		padding: 3%;
+	}
+	.xtjss{
+	padding-left: 2%;
+	}
+	.titles:nth-child(1),.titles:nth-child(3),.titles:nth-child(4){
+	margin-bottom: 0;
+	}
+	.box .row ul li a{
+		font-size: 12px;
+	}
+	#myTab li a{
+		padding: 10px 5px;
+		font-size: 12px;
+	}
+	.xtzc{
+	margin: 25px 0 25px;
+	}
+	p{
+		font-size: 12px;
+		margin: 0;
+	}
+	.titles{
+		font-size: 16px;
+	}
+	.zhiwei{
+		font-size: 14px;
+		font-weight: bold;
+		margin: 0 0 6px;
+	}
+	.zhiweims{
+		margin: 2px;
+		line-height: 14px;
+	}
+}
+@media only screen and (max-width: 320px) {
+	body{
+		font-size: 12px;
+	}
+	.backtop img{
+		width: 30px;
+		height: 30px;
+	}
+	.nav>li{
+		width: 24%;
+		text-align: center;
+	}
+	.jly_left,.jly_right,.jly_img,.xtzc,.xtzc_left,.xtzc_right,.xtjs,.xtjss{
+		width: 100%;
+		padding: 3%;
+	}
+	.xtjss{
+	padding-left: 2%;
+	}
+
+	.titles:nth-child(1),.titles:nth-child(3),.titles:nth-child(4){
+	margin-bottom: 0;
+	}
+	.box .row ul li a{
+		font-size: 12px;
+	}
+	#myTab li a{
+		padding: 10px 5px;
+		font-size: 12px;
+	}
+	.xtzc{
+	margin: 20px 0 20px;
+	}
+	p{
+		font-size: 12px;
+	}
+	.titles{
+		font-size: 16px;
+	}
+	.zhiwei{
+		font-size: 14px;
+		font-weight: bold;
+		margin: 0 0 2px;
+	}
+	.zhiweims{
+		margin: 0;
+		line-height: 12px;
+	}
+}
+

@@ -1,0 +1,203 @@
+body{
+	position: relative;
+}
+/*头部*/
+header{
+	position: fixed;
+	top: 0;
+	z-index: 50;
+	width: 100%;
+	background: white;
+}
+header img{
+	margin: 20px 0;
+}
+header ul{
+	margin-top: 12px;
+	position: relative;
+}
+@media (min-width: 992px){
+	header .col-md-9{
+	    width: 81%;
+	}
+}
+header ul li{
+	float: left;
+}
+header ul li a{
+	margin: 0 25px;
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+	font-size: 14px;
+	line-height: 42px;
+}
+header ul li .active{
+	color: white;
+	text-decoration: none;
+	background: linear-gradient(#119efe,#0771ba);
+	border-radius: 5px;
+}
+header ul li a:hover{
+	color: white;
+	text-decoration: none;
+	background: linear-gradient(#119efe,#0771ba);
+	border-radius: 5px;
+}
+header .bbb{
+	position: absolute;
+	top: 6px;
+	right: 10px;
+	display: inline-block;
+}
+header .aa{
+	display: inline-block;
+	padding: 5px 10px;
+	width: 50%;
+	text-align: center;
+	color: white;
+	background: linear-gradient(#71e3ff,#0874bf);
+}
+header .aa:hover{
+	color: white;
+	text-decoration: none;
+	background: linear-gradient(#22ff8f,#03c386);
+}
+header .login{
+	border-radius: 10px 0 0 10px;
+}
+header .register{
+	border-radius: 0 10px 10px 0;
+}
+header .row i{
+	cursor: pointer;
+	float: right;
+	font-size: 26px;
+	margin: 24px 10px 0 0;
+}
+/*头部*/
+/*右侧菜单*/
+.modal-title{
+	font: 20px "SimSun";
+	font-weight: bold;
+}
+.right-list ul li{
+	margin: 15px 0;
+	text-align: center;
+}
+.right-list ul li a{
+	display: block;
+	color: #000;
+	font-size: 18px;
+	font-family:  "SimSun";
+	text-decoration: none;
+}
+/*右侧菜单*/
+/*轮播图*/
+.carousel .carousel-control.left{
+	width: 10%;
+	background: none;
+}
+.carousel .carousel-control.right{
+	width: 10%;
+	background: none;
+}
+@media (max-width: 768px) {
+	.carousel .carousel-indicators{
+		bottom: -7px;
+	}
+}
+/*轮播图*/
+/*尾部导航*/
+.footer-one{
+	background-color: #1ed49a;
+}
+.footer-one table{
+	width: 100%;
+}
+.footer-one table td,.footer-one table th{
+	text-align: center;
+}
+.footer-one table th{
+	font-size: 23px;
+}
+.footer-one table tr a{
+	display: block;
+	padding: 5px 0;
+	color: white;
+}
+.footer-one table th a{
+	padding: 15px 0;
+}
+.footer-one table tr a:hover{
+	color: white;
+	text-decoration: none;
+}
+.navbar-header .navbar-toggle{
+	/*background: #000;*/
+	border-color: #000;
+	background: transparent;
+}
+.navbar-header .navbar-toggle span{
+	background: linear-gradient(45deg,#20bbe4,#3fef74);
+}
+.navbar-collapse .nav .dropdown{
+	/*border-bottom: 1px solid #EEEEEE;*/
+	/*border-top: 1px solid #EEEEEE;*/
+}
+.navbar-collapse .nav li a{
+	color: #20bbe4;
+}
+@media (max-width: 767px) {
+	.footer-one{
+		/*background: linear-gradient(#22ff8f,#03c386);*/
+		background: #EEEEEE;
+	}
+	.nav .dropdown>.dropdown-toggle, .nav .dropdown>.dropdown-toggle:focus, .nav .dropdown>.dropdown-toggle:hover {
+	    background-color: transparent;
+	    border-color: transparent;
+	}
+	.nav .dropdown>.dropdown-menu li a, .nav .dropdown>.dropdown-menu li a:focus, .nav .dropdown>.dropdown-menu li a:hover {
+	    background-color: transparent;
+	    border-color: transparent;
+	}
+}
+.footer-two{
+	background: #000;
+}
+.footer-two h3{
+	color: white;
+	display: inline-block;
+	float: left;
+	padding-left: 10px;
+}
+.footer-two .frident{
+	margin-top: 24px;
+	display: inline-block;
+}
+.footer-two .frident li{
+	float: left;
+}
+.footer-two .frident li a{
+	padding: 15px 10px;
+	color: white;
+	text-decoration: none;
+}
+.footer-two .frident li a:hover{
+	color: white;
+	text-decoration: none;
+}
+.footer-three{
+	margin-top: 15px;
+	text-align: center;
+}
+@media (max-width: 767px) {
+	.footer-three .container{
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+}
+.footer-three span a{
+	color: #000;
+}
+/*尾部导航*/
