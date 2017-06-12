@@ -1,0 +1,177 @@
+.box .item1{
+	background: #F1F1F1;
+	padding: 50px 0;
+}
+.box .item1 h3{
+	color: #00bbc7;
+	font-size: 30px;
+	text-align: center;
+}
+.box .item1 .hengxian{
+	width: 47px;
+	height: 5px;
+	margin: 0 auto;
+	background: #00bbc7;
+}
+.box .item1 .people{
+	display: block;
+	text-align: center;
+	font-size: 24px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+.box .item1 p{
+	text-align: center;
+}
+.box .item2{
+	padding: 50px 0;
+}
+.box .item2 h3{
+	color: #00c7a3;
+	text-align: center;
+	font-size: 30px;
+}
+.box .item2 .hengxian{
+	width: 47px;
+	height: 5px;
+	margin: 0 auto;
+	background: #00c7a3;
+}
+.item2 .a{
+	margin-top: 10px;
+	border-bottom: 1px solid #d8d8d8;
+}
+.item2 .a li{
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+.item2 .a li a{
+	display: inline-block;
+	color: #000;
+	font-size: 16px;
+	margin: 10px 0;
+}
+.item2 .a li a:hover,.item2 .a li a:focus{
+	color: #000;
+	text-decoration: none;
+}
+.item2 .a li .green{
+	color: #20d9ab;
+}
+.item2 .a li .hengxian1{
+	width: 30px;
+	height: 4px;
+	margin: 0 auto;
+	background: #20d9ab;
+}
+.item2 .table1{
+	width: 100%;
+}
+.item2 .table1 th,.table1 td{
+	width: 20%;
+	text-align: center;
+	padding: 10px 0;
+}
+.item2 .table1 th{
+	background: #20d9ab;
+}
+.item2 .table1 th a,.table1 td a{
+	color: #00c090;
+}
+.item2 .table1 th a:hover,.item2 .table1 th a:focus,.item2 .table1 td a:hover,.item2 .table1 td a:focus{
+	color: #00c090;
+	text-decoration: none;
+}
+.item2 .table1 .condition{
+	font-size: 17px;
+	font-weight: bold;
+	color: #00c8a4;
+}
+.item2 .table1 tr .b th{
+	background: none;
+}
+.table1 .b td{
+	text-align: left;
+}
+.table1 .b{
+	width: 52%;
+}
+.item2 .spn{
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+	font-size: 16px;
+}
+.item2 .yuan{
+	display: block;
+	width: 148px;
+	height: 148px;
+	border-radius: 74px;
+	font-size: 50px;
+	text-align: center;
+	line-height: 148px;
+	color: white;
+	border: 4px solid #e1e1e1;
+	margin: 30px auto;
+}
+.item2 .greeen{
+	background: #24ae7d;
+}
+.item2 .blue{
+	background: #0091d2;
+}
+.item2 .pink{
+	background: #d74985;
+}
+.item2 .last-ul p{
+	text-align: center;
+}
+
+
+
+
+
+
+/*分享*/
+.bdshare-button-style0-16 a{
+	margin: 6px 0 0 0;
+}
+.bdshare-button-style0-16{
+	position: fixed;
+    left: 0;
+    top: 220px;
+    width: 29px;
+    background: #cecece;
+    border-radius: 3px;
+}
+/*分享 end*/
+
+/*客服*/
+.fixed{
+	background: #fff;
+	display: none;
+}
+#fixed{
+	right: 0;
+}
+
+.gm{
+	position: fixed;
+	right: 0;
+	top: 30%;
+	width: 29px;
+	padding: 6px;
+	color: #fff;
+	background: #20D9AB;
+	border-radius: 3px;
+	z-index: 2;
+}
+.gm:hover{
+	/*display: none;*/
+}
+.gm:hover .fixed{
+	display: block;
+}
+/*客服 end*/
+

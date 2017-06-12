@@ -1,0 +1,84 @@
+.box{
+	margin-top: 64px;
+	background: #f1f1f1;
+}
+.box .container{
+	padding-top: 55px;
+}
+.box .xq-top{
+	padding-bottom: 10px;
+	border-bottom: 1px dashed #b7b7b7;
+	color: #000;
+}
+.box .xq-top a{
+	float: right;
+	color: #000;
+}
+.box .xq-top a:hover,.box .xq-top a:focus{
+	text-decoration: none;
+}
+.box .xq-bottom h3,.box .xq-bottom h6{
+	text-align: center;
+}
+.box .xq-bottom h3{
+	font-weight: bold;
+	margin: 50px 0 20px 0;
+}
+.box .xq-bottom h6{
+	margin-bottom: 50px;
+}
+.box .xq-bottom p{
+	text-indent: 2em;	
+	font-size: 16px;
+	line-height: 2em;
+}
+.box .xq-bottom img{
+	margin: 50px auto;
+}
+
+
+
+
+
+/*分享*/
+.bdshare-button-style0-16 a{
+	margin: 6px 0 0 0;
+}
+.bdshare-button-style0-16{
+	position: fixed;
+    left: 0;
+    top: 220px;
+    width: 29px;
+    background: #cecece;
+    border-radius: 3px;
+}
+/*分享 end*/
+
+/*客服*/
+.fixed{
+	background: #fff;
+	display: none;
+}
+#fixed{
+	right: 0;
+}
+
+.gm{
+	position: fixed;
+	right: 0;
+	top: 30%;
+	width: 29px;
+	padding: 6px;
+	color: #fff;
+	background: #20D9AB;
+	border-radius: 3px;
+	z-index: 2;
+}
+.gm:hover{
+	/*display: none;*/
+}
+.gm:hover .fixed{
+	display: block;
+}
+/*客服 end*/
+

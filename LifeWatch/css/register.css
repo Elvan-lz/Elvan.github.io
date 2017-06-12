@@ -1,0 +1,142 @@
+.box{
+	background-image: url(../img/dlzcym/tian-2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 10% 0;
+	position: relative;
+}
+@media (max-width: 768px) {
+	.box{
+		padding: 20% 0;
+	}
+}
+.box .register-top{
+	background: linear-gradient(#6de0fe,#0876c4);
+	padding: 14px 50px;
+}
+.box .register-top span{
+	color: white;
+	font-size: 16px;
+}
+.box .register-top span:nth-child(2){
+	float: right;
+}
+.box .register-bottom{
+	padding: 103px 223px;
+	background: white;
+}
+@media (max-width: 992px) {
+	.box .register-bottom{
+		padding: 103px 0;
+		background: white;
+	}
+}
+.box .register-bottom ul li{
+	margin-bottom: 10px;
+}
+#b{
+	width: 30%;
+	float: right;
+}
+.box select{
+	width: 30%;
+	height: 30px;
+	float: right;
+	margin-right: 10px;
+	background: transparent;
+}
+@media (max-width: 415px) {
+	.box .li-zuo{
+		padding: 0;
+	}
+	.box .inp{
+		width: 100%;
+	}
+	.box select{
+		width: initial;
+	}
+}
+.box .inp{
+	height: 30px;
+	border: 0;
+	border: 1px solid #BBBBBB;
+	text-align: center;
+}
+.box .inp1{
+	text-align: left;
+	padding-left: 10px;
+	border-radius: 5px;
+}
+.box .btn1{
+	float: right;
+	background: #3ebeff;
+	border: 0;
+	color: white;
+	padding: 5px 20px;
+}
+.box i{
+	font-style: normal;
+	display: inline-block;
+	width: 100%;
+	padding: 5px 0;
+	text-align: right;
+}
+.box a:hover,.box a:focus{
+	text-decoration: none;
+}
+.box .now{
+	display: block;
+	width: 35%;
+	margin: 20px auto;
+	background: #31b1f8;
+	padding: 10px 0;
+	color: white;
+	text-align: center;
+}
+
+
+
+
+
+/*分享*/
+.bdshare-button-style0-16 a{
+	margin: 6px 0 0 0;
+}
+.bdshare-button-style0-16{
+	position: fixed;
+    left: 0;
+    top: 220px;
+    width: 29px;
+    background: #cecece;
+    border-radius: 3px;
+}
+/*分享 end*/
+
+/*客服*/
+.fixed{
+	background: #fff;
+	display: none;
+}
+#fixed{
+	right: 0;
+}
+
+.gm{
+	position: fixed;
+	right: 0;
+	top: 30%;
+	width: 29px;
+	padding: 6px;
+	color: #fff;
+	background: #20D9AB;
+	border-radius: 3px;
+	z-index: 2;
+}
+.gm:hover{
+	/*display: none;*/
+}
+.gm:hover .fixed{
+	display: block;
+}
+/*客服 end*/
+

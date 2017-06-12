@@ -1,0 +1,110 @@
+.box .box-shang{
+	padding: 20px 0;
+	background: #eeeeee;
+}
+.box h3{
+	text-align: center;
+}
+.box .br{
+	width: 33px;
+	height: 2px;
+	margin: 0 auto;
+	background: #05c288;
+}
+.box .sp{
+	display: block;
+	text-align: center;
+	color: #05c288;
+	font-size: 18px;
+	margin-top: 10px;
+}
+.box .box-item li{
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+.box .box-item li img{
+	border: 1px solid #a5a5a5;
+}
+.box .box-item li p{
+	text-align: center;
+	margin-top: 10px;
+	font-size: 16px;
+}
+.box .box-item li a{
+	display: block;
+	width: 76px;
+	margin: 0 auto;
+	color: white;
+	padding: 6px 10px;
+	text-align: center;
+	background: url(../img/zxsc/lv.png) no-repeat;
+}
+.box .box-item li a:hover,.box .box-item li a:focus{
+	text-decoration: none;
+}
+.lianjie{
+	padding: 20px 0;
+	border-top: 3px solid #3fef74;
+	background: #f1f1f1;
+}
+.lianjie ul li img{
+	margin: 0 auto;
+}
+.lianjie ul li p{
+	text-align: center;
+}
+.lianjie ul li p:nth-child(2){
+	color: #000;
+	font-size: 18px;
+	margin: 15px 0;
+}
+.lianjie ul li p:nth-child(3){
+	color:909090;
+}
+
+
+
+
+
+/*分享*/
+.bdshare-button-style0-16 a{
+	margin: 6px 0 0 0;
+}
+.bdshare-button-style0-16{
+	position: fixed;
+    left: 0;
+    top: 220px;
+    width: 29px;
+    background: #cecece;
+    border-radius: 3px;
+}
+/*分享 end*/
+
+/*客服*/
+.fixed{
+	background: #fff;
+	display: none;
+}
+#fixed{
+	right: 0;
+}
+
+.gm{
+	position: fixed;
+	right: 0;
+	top: 30%;
+	width: 29px;
+	padding: 6px;
+	color: #fff;
+	background: #20D9AB;
+	border-radius: 3px;
+	z-index: 2;
+}
+.gm:hover{
+	/*display: none;*/
+}
+.gm:hover .fixed{
+	display: block;
+}
+/*客服 end*/
+

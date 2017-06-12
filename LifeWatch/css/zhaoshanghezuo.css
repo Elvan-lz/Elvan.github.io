@@ -1,0 +1,123 @@
+.box h3{
+	text-align: center;
+	color: #00c7a4;
+	font-size: 30px;
+}
+.box .hengxian{
+	width: 47px;
+	height: 5px;
+	background: #00c7a4;
+	margin: 0 auto;
+}
+.box .row ul li{
+	float: left;
+	display: inline-block;
+	text-align: center;
+}
+.box .row ul li a{
+	color: #000;
+	text-align: center;
+	font-size: 16px;
+}
+.box .row ul li a:hover,.box .row ul li a:focus{
+	text-decoration: none;
+}
+.box .row ul li .green{
+	color: #20d9ab;
+}
+.box .row ul li .hengxian-1{
+	width: 30px;
+	height: 4px;
+	background: #20d9ab;
+	margin: 0 auto;
+}
+
+
+
+
+
+/*分享*/
+.bdshare-button-style0-16 a{
+	margin: 6px 0 0 0;
+}
+.bdshare-button-style0-16{
+	position: fixed;
+    left: 0;
+    top: 220px;
+    width: 29px;
+    background: #cecece;
+    border-radius: 3px;
+}
+/*分享 end*/
+
+/*客服*/
+.fixed{
+	background: #fff;
+	display: none;
+}
+#fixed{
+	right: 0;
+}
+
+.gm{
+	position: fixed;
+	right: 0;
+	top: 30%;
+	width: 29px;
+	padding: 6px;
+	color: #fff;
+	background: #20D9AB;
+	border-radius: 3px;
+	z-index: 2;
+}
+.gm:hover{
+	/*display: none;*/
+}
+.gm:hover .fixed{
+	display: block;
+}
+/*客服 end*/
+
+
+
+
+
+
+
+
+@media (min-width: 992px){
+	.box .row ul .col-md-1{
+		padding: 0;
+		width: 12.5%;
+	}
+}
+@media (max-width: 992px) and (min-width: 768px){
+	.box .row ul .col-md-1{
+		font-size: 12px;
+		padding: 0;
+		width: 25%;
+	}
+}
+@media (max-width: 415px){
+	.box .row ul li a{
+		font-size: 12px;
+	}
+}
+@media (min-width: 415px){
+	.box .row ul li a{
+		font-size: 16px;
+	}
+}
+@media (min-width: 992px) {
+	.zpzw ul .col-md-3{
+		width: 20%;
+	}
+}
+@media (max-width: 414px) {
+	.zpzw ul li{
+		padding: 0;
+	}
+}
+.box .container .row ul{
+	margin-top: 10px;
+}
