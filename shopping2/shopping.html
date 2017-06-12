@@ -1,0 +1,402 @@
+<!-- <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%> -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,suer-scalable=no" />-->
+		<title>商品详情页</title>
+		<link rel="stylesheet" href="css/index1.css">
+		<link rel="stylesheet" href="css/shopping.css" type="text/css" />
+		<script src="js/index.js"></script>
+		<script src="js/jQuery.js"></script>
+	</head>
+	<script type="text/javascript">
+		$(document).ready(function(){ 
+			 $("#productName").blur(function(){
+				var productName = $("#productName").val();
+				//alert(productName);
+				window.location.href="index.ered?reqCode=index&productname="+productName;
+			}); 
+		});
+		
+		
+		function select(obj) {
+		var typename = $(obj).text();
+	        //alert(typename);
+	        window.location.href="index.ered?reqCode=index&typename="+typename;
+	    }
+	</script>
+	
+	<script type="text/javascript">
+	function addCart(){
+		form.action="cart.ered?reqCode=addShopCart";
+    	form.submit();
+	}
+	</script>
+	<body>
+	<!-- <%@ include file="top.jsp"%> -->
+
+	<header id="header">
+		<div class="content">
+		<!-- <img alt="" src="images/mbcpng1.jpg" style="width: 200px;height: 90px;margin-left: 150px;"> -->
+			<input type="text" id="productName" placeholder="搜索品牌/产品" >
+			<div class="header_top">
+				<ul class="list clear">
+					<li class="fl">
+						<a href="#">订单管理  |</a>
+					</li>
+					<li class="fl">
+						<a href="#">联系我们</a>
+					</li>
+				</ul>
+			</div>
+			<div class="header_bot">
+				<ul class="list clear">
+					<li class="fl">
+						<a href="/admin/login/login.html">注册或登录</a>
+					</li>
+					<li class="fl">
+						<a href="/showcart.html">购物车</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<nav id="nav" class="gradient">
+		<div class="content">
+			
+			<ul class="list clear">
+				<li class="c"><a href="#" id="phone">品牌选购</a></li>
+				<li class="c"><a href="#">服装</a></li>
+				<li class="c"><a href="#">鞋靴</a></li>
+				<li class="c"><a href="#">化妆品</a></li>
+				<li class="c"><a href="#">食品</a></li>
+				<li class="c"><a href="#">供求</a></li>
+				<li class="c"><a href="#">限时抢购</a></li>
+				<li class="c"><a href="#">微店</a></li>
+				<li class="c"><a href="liuxue.html">海外留学</a></li>
+				<li class="c"><a href="fuka.html">全球付卡申请</a></li>
+			</ul>
+			<div class="caidan">
+				<div class="caidan_zuo">
+					<ul class="ul_one">
+						<li><a href="/firsttype-100.html">家用电器</a></li>
+						<li><a href="/firsttype-1000341354.html">手机</a>/<a href="/firsttype-1000341355.html">运营商</a><a href="/firsttype-1000341356.html">数码</a></li>
+						<li><a href="/firsttype-1000341357.html">电脑</a>/<a href="/firsttype-1000341359.html">办公</a></li>
+						<li><a href="/firsttype-1000341361.html">家居</a>/<a href="/firsttype-1000341373.html">家具</a>/<a href="/firsttype-1000341374.html">家装</a></li>
+						<li><a href="/firsttype-1000341376.html">男装</a>/<a href="/firsttype-1000341377.html">女装</a>/<a href="/firsttype-1000341378.html">童装</a>/<a href="/firsttype-1000341379.html">内衣</a></li>
+						<li><a href="/firsttype-1000341380.html">美妆个护</a>/<a href="/firsttype-1000341409.html">清洁用品</a>/<a href="/firsttype-1000341381.html">宠物</a></li>
+						<li><a href="/firsttype-1000341382.html">鞋靴</a>/<a href="/firsttype-1000341383.html">箱包</a>/<a href="/firsttype-1000341384.html">珠宝</a>/<a href="/firsttype-1000341385.html">奢侈品</a></li>
+						<li><a href="/firsttype-1000341386.html">运动</a>/<a href="/firsttype-1000341387.html">户外</a>/<a href="/firsttype-1000341388.html">钟表</a></li>
+						<li><a href="/firsttype-1000341389.html">汽车</a>/<a href="/firsttype-1000341390.html">汽车用品</a></li>
+						<li><a href="/firsttype-1000341391.html">母婴</a>/<a href="/firsttype-1000341392.html">玩具乐器</a></li>
+						<li><a href="/firsttype-1000341393.html">食品</a>/<a href="/firsttype-1000341394.html">酒类</a>/<a href="/firsttype-1000341395.html">生鲜</a>/<a href="/firsttype-1000341396.html">特产</a></li>
+						<li><a href="/firsttype-1000341397.html">医疗保健</a></li>
+						<!-- <li><a href="/firsttype-1000341398.html">图书</a>/<a href="/firsttype-1000341399.html">音像</a>/<a href="/firsttype-1000341400.html">电子书</a></li> -->
+						<li><a href="/firsttype-1000341401.html">机票</a>/<a href="/firsttype-1000341402.html">酒店</a>/<a href="/firsttype-1000341403.html">旅游</a>/<a href="/firsttype-1000341404.html">生活</a></li>
+						<li><a href="/firsttype-1000341405.html">理财</a>/<a href="/firsttype-1000341406.html">众筹</a>/<a href="/firsttype-1000341407.html">白条</a>/<a href="/firsttype-1000341408.html">保险</a></li>
+					</ul>
+				</div>
+				<div class="caidan_you">
+					<ul class="ul_two">
+						<li><a href="#" onclick="select(this)">电视</a><a href="#" onclick="select(this)">空调</a><a href="#" onclick="select(this)">洗衣机</a><a href="#" onclick="select(this)">冰箱</a><a href="#" onclick="select(this)">厨卫大电</a><a href="#" onclick="select(this)">厨房小电</a><a href="#" onclick="select(this)">生活电器</a><a href="#" onclick="select(this)">个护健康</a><a href="#" onclick="select(this)">家庭影院</a><a href="#" onclick="select(this)">进口电器</a><a href="#" onclick="select(this)">家电馆</a><a href="#" onclick="select(this)">智能生活馆</a><a href="#" onclick="select(this)">京东净化馆</a><a href="#" onclick="select(this)">城镇体验馆</a></li>
+						<li><a href="#" onclick="select(this)">手机通讯</a><a href="#" onclick="select(this)">运营商</a><a href="#" onclick="select(this)">手机配件</a><a href="#" onclick="select(this)">摄影摄像</a><a href="#" onclick="select(this)"></a><a href="#" onclick="select(this)">数码配件</a><a href="#" onclick="select(this)">影音娱乐</a><a href="#" onclick="select(this)">智能设备</a><a href="#" onclick="select(this)">电子教育</a><a href="#" onclick="select(this)">手机频道</a><a href="#" onclick="select(this)">网上营业厅</a><a href="#" onclick="select(this)">配件选购中心</a><a href="#" onclick="select(this)">影像Club</a></li>
+						<li><a href="#" onclick="select(this)">电脑整机</a><a href="#" onclick="select(this)">电脑配件</a><a href="#" onclick="select(this)">外设产品</a><a href="#" onclick="select(this)">游戏设备</a><a href="#" onclick="select(this)">网络产品</a><a href="#" onclick="select(this)">办公设备</a><a href="#" onclick="select(this)">文具耗材</a><a href="#" onclick="select(this)">服务产品</a><a href="#" onclick="select(this)">装机大师</a></li>
+						<li><a href="#" onclick="select(this)">厨具</a><a href="#" onclick="select(this)">家纺</a><a href="#" onclick="select(this)">生活日用</a><a href="#" onclick="select(this)">家装软饰</a><a href="#" onclick="select(this)">灯具</a><a href="#" onclick="select(this)">家具</a><a href="#" onclick="select(this)">家装主材</a><a href="#" onclick="select(this)">厨房卫浴</a><a href="#" onclick="select(this)">五金电工</a><a href="#" onclick="select(this)">装修定制</a><a href="#" onclick="select(this)">家装建材</a><a href="#" onclick="select(this)">厨房达人</a><a href="#" onclick="select(this)">装修服务</a></li>
+						<li><a href="#" onclick="select(this)">女装</a><a href="#" onclick="select(this)">男装</a><a href="#" onclick="select(this)">内衣</a><a href="#" onclick="select(this)">配饰</a><a href="#" onclick="select(this)">童装童鞋</a><a href="#" onclick="select(this)">国际服装</a><a href="#" onclick="select(this)">自营服装</a></li>
+						<li><a href="#" onclick="select(this)">面部护肤</a><a href="#" onclick="select(this)">洗发护发</a><a href="#" onclick="select(this)">身体护理</a><a href="#" onclick="select(this)">口腔护理</a><a href="#" onclick="select(this)">女性护理</a><a href="#" onclick="select(this)">香水彩妆</a><a href="#" onclick="select(this)">清洁用品</a><a href="#" onclick="select(this)">宠物生活</a></li>
+						<li><a href="#" onclick="select(this)">时尚女鞋</a><a href="#" onclick="select(this)">流行男鞋</a><a href="#" onclick="select(this)">潮流女包</a><a href="#" onclick="select(this)">精品男包</a><a href="#" onclick="select(this)">功能箱包</a><a href="#" onclick="select(this)">奢侈品</a><a href="#" onclick="select(this)">精选大牌</a><a href="#" onclick="select(this)">礼品</a><a href="#" onclick="select(this)">珠宝首饰</a><a href="#" onclick="select(this)">金银投资</a><a href="#" onclick="select(this)">收藏投资</a><a href="#" onclick="select(this)">国际珠宝馆</a></li>
+						<li><a href="#" onclick="select(this)">运动鞋包</a><a href="#" onclick="select(this)">运动服饰</a><a href="#" onclick="select(this)">健身训练</a><a href="#" onclick="select(this)">骑行运动</a><a href="#" onclick="select(this)">体育用品</a><a href="#" onclick="select(this)">户外装备</a><a href="#" onclick="select(this)">垂钓用品</a><a href="#" onclick="select(this)">游泳用品</a><a href="#" onclick="select(this)">钟表</a><a href="#" onclick="select(this)">运动城</a><a href="#" onclick="select(this)">户外馆</a><a href="#" onclick="select(this)">健身房</a><a href="#" onclick="select(this)">骑行馆</a></li>
+						<li><a href="#" onclick="select(this)">汽车车型</a><a href="#" onclick="select(this)">汽车价格</a><a href="#" onclick="select(this)">维修保养</a><a href="#" onclick="select(this)">汽车装饰</a><a href="#" onclick="select(this)">车载电器</a><a href="#" onclick="select(this)">美容清洗</a><a href="#" onclick="select(this)">安全自驾</a><a href="#" onclick="select(this)">赛事改装</a><a href="#" onclick="select(this)">汽车服务</a><a href="#" onclick="select(this)">车管家</a><a href="#" onclick="select(this)">旗舰店</a><a href="#" onclick="select(this)">二手车</a><a href="#" onclick="select(this)">油卡充值</a></li>
+						<li><a href="#" onclick="select(this)">奶粉</a><a href="#" onclick="select(this)">营养辅食</a><a href="#" onclick="select(this)">尿裤湿巾</a><a href="#" onclick="select(this)">喂养用品</a><a href="#" onclick="select(this)">洗护用品</a><a href="#" onclick="select(this)">寝居服饰</a><a href="#" onclick="select(this)">妈妈专区</a><a href="#" onclick="select(this)">童车童床</a><a href="#" onclick="select(this)">玩具</a><a href="#" onclick="select(this)">乐器</a><a href="#" onclick="select(this)">亲子馆</a></li>
+						<li><a href="#" onclick="select(this)">新鲜水果</a><a href="#" onclick="select(this)">蔬菜蛋品</a><a href="#" onclick="select(this)">精选肉类</a><a href="#" onclick="select(this)">海鲜水产</a><a href="#" onclick="select(this)">冷饮冻食</a><a href="#" onclick="select(this)">中外名酒</a><a href="#" onclick="select(this)">进口食品</a><a href="#" onclick="select(this)">休闲食品</a><a href="#" onclick="select(this)">地方特产</a><a href="#" onclick="select(this)">茗茶</a><a href="#" onclick="select(this)">饮料冲调</a><a href="#" onclick="select(this)">粮油调味</a></li>
+						<li><a href="#" onclick="select(this)">中西药品</a><a href="#" onclick="select(this)">营养健康</a><a href="#" onclick="select(this)">营养成分</a><a href="#" onclick="select(this)">滋补养生</a><a href="#" onclick="select(this)">成人用品</a><a href="#" onclick="select(this)">保健器械</a><a href="#" onclick="select(this)">护理护具</a><a href="#" onclick="select(this)">膳食补充</a><a href="#" onclick="select(this)">健康监测</a><a href="#" onclick="select(this)">两性生活</a></li>
+						<!-- <li><a href="#" onclick="select(this)">音像</a><a href="#" onclick="select(this)">少儿</a><a href="#" onclick="select(this)">教育</a><a href="#" onclick="select(this)">文艺</a><a href="#" onclick="select(this)">经营励志</a><a href="#" onclick="select(this)">人文社科</a><a href="#" onclick="select(this)">生活</a><a href="#" onclick="select(this)">科技</a><a href="#" onclick="select(this)">刊/原版</a><a href="#" onclick="select(this)">电子书</a><a href="#" onclick="select(this)">数字音乐</a><a href="#" onclick="select(this)">娱乐圈</a><a href="#" onclick="select(this)">文娱众筹馆</a></li> -->
+						<li><a href="#" onclick="select(this)">交通出行</a><a href="#" onclick="select(this)">酒店预订</a><a href="#" onclick="select(this)">旅游度假</a><a href="#" onclick="select(this)">商旅服务</a><a href="#" onclick="select(this)">演出服务</a><a href="#" onclick="select(this)">生活缴费</a><a href="#" onclick="select(this)">生活服务</a><a href="#" onclick="select(this)">教育培训</a><a href="#" onclick="select(this)">彩票</a><a href="#" onclick="select(this)">游戏</a><a href="#" onclick="select(this)">海外生活</a><a href="#" onclick="select(this)">电影票</a><a href="#" onclick="select(this)">机票</a><a href="#" onclick="select(this)">火车票</a><a href="#" onclick="select(this)">特惠酒店</a></li>
+						<li><a href="#" onclick="select(this)">理财</a><a href="#" onclick="select(this)">众筹</a><a href="#" onclick="select(this)">东家</a><a href="#" onclick="select(this)">白条</a><a href="#" onclick="select(this)">钱包</a><a href="#" onclick="select(this)">保险</a><a href="#" onclick="select(this)">尖er货</a><a href="#" onclick="select(this)">0元评测</a><a href="#" onclick="select(this)">In货推荐</a><a href="#" onclick="select(this)">财发现</a></li>
+					
+	 				</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+
+		<div class="warp_shop" style="margin-bottom: 50px;">
+			<div class="content_shop">
+				<div class="con_sl">
+					<div class="fangdajing">
+					<c:forEach items="${datuList}" var="item">
+						<div class="con_slimg">
+							<img class="con_sl_img" src="img/001.jpg" alt="1" width="450" height="450" />
+							<p class="move"></p>
+						</div>
+						
+						<div class="con_slimg_big">
+							<div class="big_img">
+								<img class="big_img_src" src="img/001.jpg" alt="" />
+							</div>
+						</div>
+					</c:forEach>
+					</div>
+					
+					
+					<div class="con_slimgs">
+						<div>
+	                        <a href="javascript:;" class="shop_l">&lsaquo;</a>
+	                        <a href="javascript:;" class="shop_r">&rsaquo;</a>
+	                        <div class="con_slx">
+	                            <ul>
+	                            	<c:forEach items="${xiaotuList}" var="item">
+	                            	<li class="xiaotu"><img class="xiaotus" alt="2" src="img/001.jpg" width="54" height="54"></li>
+	                            	<li class="xiaotu"><img class="xiaotus" alt="3" src="img/002.jpg" width="54" height="54"></li>
+	                            	<li class="xiaotu"><img class="xiaotus" alt="3" src="img/003.jpg" width="54" height="54"></li>
+	                            	<li class="xiaotu"><img class="xiaotus" alt="4" src="img/004.jpg" width="54" height="54"></li>
+	                            	<li class="xiaotu"><img class="xiaotus" alt="5" src="img/005.jpg" width="54" height="54"></li>
+	                            	</c:forEach>
+	                            </ul>
+	                        </div>
+	                    </div>
+					</div>
+				</div>
+				<div class="con_sr">
+				<form action="" name="form" method="post">
+				<c:forEach items="${datuList}" var="item">
+					<div class="con_srn">商品名称商品名称商品名称商品名称</div>
+					<div class="price_wrap">
+                        <div class="price">
+                            <div class="dt">京 东 价</div>
+                            <div class="dd">
+                                <span class="p_price"><span>￥</span><span class="price_22">$22.50</span></span>
+                                <a href="#none" class="jj">降价通知</a>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="pj">
+                                <p class="">累计评价</p>
+                                <a class="" href="#none">7000+</a>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="s">
+                                <div class="dt" style="line-height: 25px;">促　　销</div>
+                                <div class="dd" style="position: relative; top: 2px;">
+                        			<span class="red_b">限制</span>
+                        			<span class="red_p">此价格不与套装优惠同时享受</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="payms">
+						<div class="dt">商品介绍</div>
+						<div class="dd">
+							<p class="sp_ms">我是一部手机</p>
+						</div>
+					</div>
+					<div class="pay_lx clearfix">
+						<div class="dt dt_lh">商品颜色</div>
+						<div class="dd">
+							<div class="pay_lxs">磨砂黑</div>
+							<div class="pay_lxs">黄金色</div>
+							<div class="pay_lxs">银白色</div>
+						</div>
+					</div>
+					<div class="pay_tc clearfix">
+						<div class="dt dt_lh">商品套餐</div>
+						<div class="dd">
+							<div class="pay_tcs">套餐1</div>
+							<div class="pay_tcs">套餐2</div>
+							<div class="pay_tcs">套餐3</div>
+						</div>
+					</div>
+				
+					<div class="buy">
+						<div class="ijj">
+							<div class="shuru">
+								<input type="text" value="1" id="number" name="number"/>
+							</div>
+							
+							<div class="jiajian">
+								<span class="jia" onclick="jia()">+</span>
+								<span class="jia jian" onclick="jian()">-</span>
+							</div>
+						</div>
+						<button><a href="#" style="color: white;" onclick="addCart()">加入购物车</a></button>
+					</div>
+					<input type="hidden" name="productid" id="productid" value="${item.productid}"></input> 
+					<input type="hidden" name="color" id="color" value="${item.prodcolor}"></input> 
+					<input  type="hidden" name="title" id="title" value="${item.productname}"></input>
+					<input type="hidden" name="img" id="img" value="${item.filepath}"></input> 
+					<input type="hidden"  name="num" id="num" value="${item.num}"></input> 
+					<input  type="hidden" name="curprice" id="curprice" value="${item.discount}"></input>
+					</c:forEach>
+				</form>
+				</div>
+			</div>
+		</div>
+		<!-- <%@ include file="footer.jsp"%> -->
+		<footer id="footer">
+			<div class="content">
+				<div class="footer_top">
+					<ul class="clear">
+						<li><a href="">付运&税收</a></li>
+						<li><a href="">退货条款</a></li>
+						<li><a href="">常见问题</a></li>
+						<li><a href="">联系我们</a></li>
+					</ul>
+				</div>
+				<div class="footer_center">
+					<div class="pay">
+						<h3>付款方式：</h3>
+						<ul class="clear">
+							<li><img src="img/Alipay.png" alt=""></li>
+							<li><img src="img/tenpay.png" alt=""></li>
+							<li><img src="img/Unionpay.png" alt=""></li>
+							<li><img src="img/wechatpay.jpg" alt=""></li>
+						</ul>
+					</div>
+					<div class="person">
+						<ul>
+							<li><a href="">我的账户</a></li>
+							<li><a href="">订单查询</a></li>
+							<li><a href="">订单记录</a></li>
+							<li><a href="">我的评论</a></li>
+						</ul>
+					</div>
+					<div class="my_ghh">
+						<ul>
+							<li><a href="">港货汇简介</a></li>
+							<li><a href="">关于我们</a></li>
+							<li><a href="">联系我们</a></li>
+							<li><a href="">合作伙伴</a></li>
+						</ul>
+					</div>
+					<div class="load">
+						<h3>下载：</h3>
+						<img src="img/appstore.png" alt="">
+						<img src="img/gooloe.png" alt="">
+						<img src="img/app.png" alt="">
+					</div>
+				</div>
+				<div class="footer_bot">
+					<p>隐私&安全 | 使用条款</p>
+					<p>1998 - 2017 © 港货汇版权所有</p>
+					<p>ICP证:京ICP备11007848号-1</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+	<!-- top -->
+	<script>
+
+	  //按钮下标也要加上相同的鼠标事件，不然图片停止了，定时器没停，会突然闪到很大的数字上。 貌似我可以直接追加到之前定义事件中。
+	 	$(".caidan").css({display:"none"});
+		$("#phone").on("mouseenter",function(){
+			$(".caidan").animate({top:"42px","opacity":"1"},function(){
+				$(".caidan").css({display:"block"})
+			});
+		})
+		$(".caidan").on("mouseleave",function(){
+			$(".caidan").animate({top:"20px","opacity":"0"},function(){
+				$(".caidan").css({display:"none"});
+			});
+		})
+	</script>
+	<!-- top end -->
+	
+	<script type="text/javascript">
+		var bbox = document.getElementsByClassName("con_slimg")[0];
+		var bmove = document.getElementsByClassName("move")[0];
+		var bbimg = document.getElementsByClassName("con_slimg_big")[0];
+		var b_bimg = document.getElementsByClassName("big_img")[0];
+		var con_sl = document.getElementsByClassName("con_sl")[0];
+		console.log(con_sl)
+		
+		var xiaotu = document.getElementsByClassName("xiaotu");
+		var xiaotus = document.getElementsByClassName("xiaotus");
+		var xiaotu1 = document.getElementsByClassName("con_sl_img")[0];
+		var xiaotu2 = document.getElementsByClassName("big_img_src")[0];
+		
+		var body = document.body;
+		console.log(body)
+
+		for(var i = 0; i < xiaotu.length; i++){
+			xiaotu[i].index = i;
+			xiaotu[i].onmouseover = function(){
+				for(var j = 0; j < xiaotu.length; j++){
+					xiaotu[j].style.border = "none";
+				}
+				var st_index = this.index;
+				xiaotu1.src = xiaotus[st_index].src;
+				xiaotu2.src = xiaotus[st_index].src;
+//				xiaotu1.src = "img/" + (st_index+1) + ".jpg";
+//				b_bimg.src = "img/" + (st_index+1) + "_big.jpg";
+				xiaotu[st_index].style.border = "1px solid #E4393C";
+			}
+		}
+
+		function bigimg(){
+		  bbox.onmouseover = function() {
+		  	//鼠标移动到box上显示大图片和选框
+		    bbimg.style.display = "block";
+		    bmove.style.display="block";
+		  }
+		  bbox.onmouseout = function(){//鼠标移开box不显示大图片和选框
+		    bbimg.style.display = "none";
+		    bmove.style.display="none";
+		  }
+		  bbox.onmousemove = function(e){//获取鼠标位置
+		    var x = e.clientX;//鼠标相对于视口的位置
+		    var y = e.clientY;
+		    var t = con_sl.offsetTop - bbox.offsetTop - body.scrollTop;//box相对于视口的位置
+		    var l = con_sl.offsetLeft - bbox.offsetLeft - body.scrollLeft;
+		    var _left = x - l - bmove.offsetWidth/2; 
+		    //计算move的位置
+		    var _top = y - t -bmove.offsetHeight/2;
+		    if(_top<=0)//滑到box的最顶部
+		      _top = 0;
+		    else if(_top>=bbox.offsetHeight-bmove.offsetHeight)//滑到box的最底部
+		      _top = bbox.offsetHeight-bmove.offsetHeight ;
+		    if(_left<=0)//滑到box的最左边
+		      _left=0;
+		    else if(_left>=bbox.offsetWidth-bmove.offsetWidth)//滑到box的最右边
+		      _left=bbox.offsetWidth-bmove.offsetWidth ;
+		    bmove.style.top = _top +"px";//设置move的位置
+		    bmove.style.left = _left + "px";
+		    var w = _left/(bbox.offsetWidth-bmove.offsetWidth);//计算移动的比例
+		    var h = _top/(bbox.offsetHeight-bmove.offsetHeight);
+		    var b_bimg_top = (b_bimg.offsetHeight-bbimg.offsetHeight)*h;//计算大图的位置
+		    var b_bimg_left = (b_bimg.offsetWidth-bbimg.offsetWidth)*w;
+		    b_bimg.style.top = -b_bimg_top + "px";//设置大图的位置信息
+		    b_bimg.style.left = -b_bimg_left + "px";
+		  }
+		}
+		
+		bigimg()
+	</script>
+	
+	<script type="text/javascript">
+		function jia(){
+			var number = $("#number").val();
+			number = parseInt(number) + 1;
+			$("#number").val(number);
+		}
+		function jian(){
+			var number = $("#number").val();
+			
+			number = parseInt(number) - 1;
+			if(number == 0){
+				return;
+			}
+			$("#number").val(number);
+		}
+	</script>
+	
+</html>
+

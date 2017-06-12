@@ -1,0 +1,197 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+.wrap_xiadan{
+	width: 100%;
+}
+.xiadan{
+	width: 920px;
+	margin: 0 auto;
+}
+
+.dizhi,.pay,.songhuoqingdan,.invoice{
+	color: #666;
+	padding: 10px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+.dizhi_nav{
+	font-size: 14px;
+	line-height: 31px;
+	padding: 0 10px;
+	background: #f3f3f3;
+}
+/*地址*/
+.dizhi div{
+	margin: 15px 0;
+}
+.dizhi div p{
+	display: inline-block;
+	width: 75px;
+	font-size: 12px;
+	text-align: right;
+}
+.dizhi div p span{
+	color: red;
+}
+
+.dizhi div .p_gray{
+	display: block;
+	width: 100%;
+	text-align: left;
+	margin: 0 0 0 75px;
+}
+.dizhi div .p_gray2{
+	display: inline-block;
+	width: 300px;
+	text-align: left;
+	margin-left: 15px;
+}
+.dizhi div .p_gray2 span{
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	color: #333;
+	padding: 4px 14px;
+	cursor: pointer;
+}
+.xiangxidizhi{
+	display: inline-block;
+	width: 270px;
+}
+/*地址 end*/
+
+/*支付方式*/
+.pay_way{
+	margin: 15px 0px 0 15px;
+}
+.pay_way .pay_ways{
+	padding: 4px 24px;
+	border: 1px solid #ddd;
+	color: #333;
+	font-size: 12px;
+	margin: 0 10px;
+	cursor: pointer;
+}
+.pay_way .pay_ways:hover{
+	border: 2px solid #e4393c;
+	padding: 3px 23px;
+}
+/*支付方式 end*/
+
+/*送货清单*/
+.songhuoqingdan p{
+	margin: 0;
+	padding: 0;
+}
+.qingdan{
+	margin-top: 10px;
+}
+.con2_pp1 img,.con2_pp2 img{
+	position: relative;
+	top: 2px;
+	margin-right: 2px;
+}
+.peisongfangshi{
+	width: 300px;
+	height: 265px;
+	padding: 10px 10px 10px 20px;
+	background: #f7f7f7;
+}
+.songhuoqingdan{
+	padding-bottom: 0;
+}
+/*送货清单 end*/
+
+
+.qingdan ul li{
+	margin: 10px 0;
+	background: #fff4e8;
+	padding: 10px;
+}
+
+/*发票*/
+.invoice{
+	padding-bottom: 0;
+}
+.invoice_p p{
+	margin: 1rem 0;
+}
+.invoice_p p span{
+	font-size: 12px;
+	color: #666;
+	margin-left: 20px;
+}
+.invoice_p p span:nth-child(4){
+	cursor: pointer;
+	color: #005ea7;
+}
+.invoice_p p span:nth-child(4):hover{
+	color: #C81623;
+}
+/*发票 end*/
+
+/*结算*/
+.xiangqing{
+	font-size: 12px;
+	padding: 10px 10px 0 10px;
+	color: #666666;
+}
+.dd_xiangqing{
+	padding: 0 10px;
+}
+.dd_xiangqing p{
+	margin: 1em 0;
+}
+.prices,.price_red{
+	display: inline-block;
+	width: 120px;
+	text-align: right;
+	float: right;
+}
+.sl{
+	font-weight: 600;
+	color: #C81623;
+}
+.price p{
+	text-align: right;
+	margin: 1em 0;
+}
+.shouhuo{
+	margin-left: 10px;
+}
+.price{
+	background: #f4f4f4;
+	padding: 1px 10px 10px;
+}
+.price_red{
+	color: #C81623;
+	font-size: 18px;
+	font-weight: 900;
+}
+
+
+.submit{
+	padding: 0 10px;
+	width: 100%;
+}
+.submit input{
+	float: right;
+	font: 700 25px Arial,"microsoft yahei";
+    color: #fff;
+    background: #df3033;
+    border: 0;
+    padding: 6px 24px 8px;
+    border-radius: 5px;
+    margin: 5px 20px;
+}
+/*结算 end*/
+
+
+
+

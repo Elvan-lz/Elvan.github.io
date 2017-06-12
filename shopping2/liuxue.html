@@ -1,0 +1,266 @@
+<!-- <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>留学网</title>
+
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="http://fonts.useso.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="css/liuxue.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="css/templatemo-style1.css">                                   <!-- Templatemo style -->
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <![endif]-->
+</head>
+
+    <body>
+       
+        <div class="tm-header">
+            <div class="container-fluid">
+                <div class="tm-header-inner">
+                    <a href="javascript:;" class="navbar-brand tm-site-name">留学网</a>
+                    
+                    <!-- navbar -->
+                    <nav class="navbar tm-main-nav">
+
+                        <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#tmNavbar">
+                            &#9776;
+                        </button>
+                        
+                        <div class="collapse navbar-toggleable-sm" id="tmNavbar">
+                            <ul class="nav navbar-nav">
+                            	<li class="nav-item">
+                                    <a href="index.html" class="nav-link">商城</a>
+                                </li>
+                                                         
+                                 <li class="nav-item active">
+                                    <a href="liuxue.jsp" class="nav-link">首页</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="liuxue_detail.html" class="nav-link">详情</a>
+                                </li>
+                            </ul>                        
+                        </div>
+                        
+                    </nav>  
+
+                </div>                                  
+            </div>            
+        </div>
+
+        <div class="tm-home-img-container">
+            <img src="img/tm-home-img.jpg" alt="Image" class="hidden-lg-up img-fluid">
+        </div>
+
+        <section class="tm-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
+                        <h2 class="tm-gold-text tm-title">国际游学</h2>
+                        <p class="tm-subtitle">游学，不是简单的旅行，也不是简单的学习，而是"行万里路，读万卷书"的过程。离开依赖父母的熟悉环境，到世界的另一端，在体验中尽情学，在行走中放肆玩。通过1-4周短时浸泡，融入当地文化，提升语言能力，开阔国际视野。</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+
+                        <div class="tm-content-box">
+                            <img src="img/tm-img-310x180-1.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
+                            <h4 class="tm-margin-b-20 tm-gold-text">法国</h4>
+                            <p class="tm-margin-b-20">法国留学前途全程1对1名海归名师全程跟踪服务,为您解读留学申请新政策.法国留学前途留学院校及专业选择,奖学金申请,签证办理就到新东方前途出国.</p>
+                            <a href="liuxue_detail.html" class="tm-btn text-uppercase">预约</a>    
+                        </div>  
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+
+                        <div class="tm-content-box">
+                            <img src="img/tm-img-310x180-2.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
+                            <h4 class="tm-margin-b-20 tm-gold-text">美国</h4>
+                            <p class="tm-margin-b-20">哈佛大学等41位美国名校前招生官评估美国留学概率,90%学员录取美国前30名校十数年经验的前任招生官权威指导,真正高端的美国大学申请!</p>
+                            <a href="liuxue_detail.html" class="tm-btn text-uppercase">预约</a>    
+                        </div>  
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+
+                        <div class="tm-content-box">
+                            <img src="img/tm-img-310x180-3.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
+                            <h4 class="tm-margin-b-20 tm-gold-text">英国</h4>
+                            <p class="tm-margin-b-20">留学英国IDP专家全面解析,全新签证政策分享,2017年留学趋势展望留学英国选IDP,48年专注于优质留学服务.海外归国精英智囊团为您提供一站式服务.</p>
+                            <a href="liuxue_detail.html" class="tm-btn text-uppercase">预约</a>    
+                        </div>  
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+
+                        <div class="tm-content-box">
+                            <img src="img/tm-img-310x180-4.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
+                            <h4 class="tm-margin-b-20 tm-gold-text">德国</h4>
+                            <p class="tm-margin-b-20">2017德国留学必读,条件+费用+政策+技巧+经验,点击咨询!新通德国留学,快速评估,20年德国留学专业经验,30万成功案例.</p>
+                            <a href="liuxue_detail.html" class="tm-btn text-uppercase">预约</a>    
+                        </div>  
+
+                    </div>
+                </div> <!-- row -->
+
+                <div class="row tm-margin-t-big">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        <div class="tm-2-col-left">
+                            
+                            <h3 class="tm-gold-text tm-title">专业留学团队是申请成功的关键</h3>
+                            <p class="tm-margin-b-30">我们拥有专业的师资力量</p>
+                            <img src="img/tm-img-660x330-1.jpg" alt="Image" class="tm-margin-b-40 img-fluid">
+                            <p>
+                                通过IDP搭建的强大全球网络，世界各地的学生能够掌握到澳大利亚、美国、英国、加拿大、新西兰等地院校最新、最全面的课程信息。IDP的550名资深顾问分散于全球各个分支机构，以其专业化的咨询和定制化的服务，为学生出国深造和职业发展出谋划策，帮助他们完成跻身国际舞台的梦想。
+                            </p>
+                            <p>1989年，IDP携手英国文化协会（British Council）、剑桥大学考试委员会（CESOL）共同开发并推广IELTS（雅思考试），成为该权威英语能力测试的三大主办方之一。IDP各国办公室同时也为其他国际考试设立考点，如"澳大利亚翻译资格考试"（NAATI）、"国际学生入学考试"（ISAT）等。</p>
+                            <p class="m-b-2">IDP是国际上公认的教育行业市场调研权威机构，我们通过大量不断的调查，对全球国际教育发展趋势进行分析和评估。业界各方如教育机构、政府主管部门、行业团体、专业组织、用人单位等都非常重视IDP的调研结果，并借此调整自身的国际发展战略、更好地服务国际学生。 </p>
+                        </div>
+                    </div>
+                    
+                    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+
+                        <div class="tm-2-col-right">
+
+                            <div class="tm-2-rows-md-swap">
+                                <div class="row tm-2-rows-md-down-1 tm-margin-t-mid">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                        <h3 class="tm-gold-text tm-title tm-margin-b-30">资深团队</h3>
+                                        <div class="media tm-related-post">
+                                          <div class="media-left media-middle">
+                                            <a href="javascript:;">
+                                              <img class="media-object" src="img/tm-img-240x120-1.jpg" alt="Generic placeholder image">
+                                            </a>
+                                          </div>
+                                          <div class="media-body">
+                                            <a href="javascript:;"><h4 class="media-heading tm-gold-text tm-margin-b-15">Lloyd Peterson 耶鲁大学前招生官</h4></a>
+                                            <p class="tm-small-font tm-media-description">我的工作经历：耶鲁大学前高级招生官，美国大学升学顾问联盟资深成员，常春藤联盟及姐妹学校财政资助招生联合委员前主席。</p>
+                                          </div>
+                                        </div>
+                                        <div class="media tm-related-post">
+                                          <div class="media-left media-middle">
+                                            <a href="javascript:;">
+                                              <img class="media-object" src="img/tm-img-240x120-2.jpg" alt="Generic placeholder image">
+                                            </a>
+                                          </div>
+                                          <div class="media-body">
+                                            <a href="javascript:;"><h4 class="media-heading tm-gold-text tm-margin-b-15">Willie Dixon 杜克大学前招生官</h4></a>
+                                            <p class="tm-small-font tm-media-description">我的工作经历：哈佛、斯坦福、宾大、乔治城、杜克五校招生官联盟 exploring college options 的主办人，在美国大学招生界有着极高的声望。</p>
+                                          </div>
+                                        </div>
+                                        <div class="media tm-related-post">
+                                          <div class="media-left media-middle">
+                                            <a href="javascript:;">
+                                              <img class="media-object" src="img/tm-img-240x120-3.jpg" alt="Generic placeholder image">
+                                            </a>
+                                          </div>
+                                          <div class="media-body">
+                                            <a href="javascript:;"><h4 class="media-heading tm-gold-text tm-margin-b-15">陈起永 VIP留学申请顾问</h4></a>
+                                            <p class="tm-small-font tm-media-description">我的工作经历：董事长兼总裁，北京大学本科及硕士毕业，后获得西北大学PhD Fellowship全奖赴美留学，现为美国西北大学及哈佛大学校友。</p>
+                                          </div>
+                                        </div>
+                                        <div class="media tm-related-post">
+                                          <div class="media-left media-middle">
+                                            <a href="javascript:;">
+                                              <img class="media-object" src="img/tm-img-240x120-4.jpg" alt="Generic placeholder image">
+                                            </a>
+                                          </div>
+                                          <div class="media-body">
+                                            <a href="javascript:;"><h4 class="media-heading tm-gold-text tm-margin-b-15">许老师 红钻留学申请顾问</h4></a>
+                                            <p class="tm-small-font tm-media-description">我的工作经历：美国本科和高中资深申请顾问、钻石导师及本科部主管;擅长美国本科综合性大学、文理学院及奖学金申请</p>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div> <!-- row -->
+
+            </div>
+        </section>
+        
+        <footer class="tm-footer">
+            <div class="container-fluid">
+                <div class="row">
+                    
+
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        <div class="tm-footer-content-box tm-footer-links-container">
+                        
+                            <h3 class="tm-gold-text tm-title tm-footer-content-box-title">留学服务</h3>
+                            <nav>
+                                <ul class="nav">
+                                    <li><a href="javascript:;" class="tm-footer-link">本科留学申请</a></li>
+                                    <li><a href="javascript:;" class="tm-footer-link">研究生留学申请</a></li>
+                                    <li><a href="javascript:;" class="tm-footer-link">高中留学申请</a></li>
+                                    <li><a href="javascript:;" class="tm-footer-link">本科转学申请</a></li>
+                                    <li><a href="javascript:;" class="tm-footer-link">官方微博</a></li>
+                                    <li><a href="javascript:;" class="tm-footer-link">关于我们</a></li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                        
+                    </div>
+
+                    <!-- Add the extra clearfix for only the required viewport 
+                        http://stackoverflow.com/questions/24590222/bootstrap-3-grid-with-different-height-in-each-item-is-it-solvable-using-only
+                    -->
+                    <div class="clearfix hidden-lg-up"></div>
+
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+
+                        <div class="tm-footer-content-box">
+                        
+                            <h3 class="tm-gold-text tm-title tm-footer-content-box-title">Fusce non turpis</h3>
+                            <div class="tm-margin-b-30">
+                                <img src="img/tm-img-100x100-1.jpg" alt="Image" class="tm-footer-thumbnail">
+                                <img src="img/tm-img-100x100-2.jpg" alt="Image" class="tm-footer-thumbnail">
+                                <img src="img/tm-img-100x100-3.jpg" alt="Image" class="tm-footer-thumbnail">
+                                <img src="img/tm-img-100x100-4.jpg" alt="Image" class="tm-footer-thumbnail">
+                                <img src="img/tm-img-100x100-5.jpg" alt="Image" class="tm-footer-thumbnail">
+                                <img src="img/tm-img-100x100-6.jpg" alt="Image" class="tm-footer-thumbnail">
+                            </div>
+                            <!--<p class="tm-margin-b-20">Curabitur dui massa, aliquam quis mi sed, tempor vulputate tellus. Sed vestibulum non neque.</p>-->
+                            <!--<a href="javascript:;" class="tm-btn tm-btn-gray text-uppercase">Browse</a>-->
+
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- load JS files -->
+        <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="js/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
+        <script src="js/bootstrap1.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
+       
+</body>
+</html>

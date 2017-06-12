@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/Share.css"/>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+		<link rel="stylesheet" type="text/css" href="../LifeWatch/css/footer.css" />
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7/dist/css/bootstrap.min.css"/>
+		<title>在线注册</title>
+	</head>
+	<body>
+		<!--头部-->
+		<header id="header"></header>
+		<!--头部-->
+		<!--右侧菜单-->
+		<div id="right-list"></div>
+		<!--右侧菜单-->
+		<!--主体-->
+		<div class="box">
+			<div class="container">
+				<div class="row">
+					<div class="register col-md-12">
+						<div class="register-top">
+							<span>在线注册</span>
+							<!-- <span class="hidden-xs">Life Watch&nbsp;&nbsp;护卫生命 · 守候健康</span> -->
+						</div>
+						<div class="register-bottom">
+							<form>
+								<ul>
+									<li class="clearfix">
+										<div class="li-zuo col-md-5 col-sm-5 col-xs-5">
+											<input type="text" id="b" class="inp" disabled="disabled"/>
+											<select name="country" id="two" class="col-md-">
+												<option value="guojia" disabled="disabled" selected="selected">国家</option>
+							                    <option value="zg" text="+086">中国</option> 
+							                    <option value="mg" text="+001">美国</option>
+							                    <option value="rb" text="+0081">日本</option>
+							                    <option value="ydl" text="+0039">意大利</option>
+							                    <option value="fg" text="+0033">法国</option>
+							                    <option value="yg" text="+0044">英国</option>
+							                    <option value="els" text="+007">俄罗斯</option>
+							                    <option value="jnd" text="+001">加拿大</option>
+							                    <option value="hg" text="+0082">韩国</option>
+											</select>		
+										</div>
+										<div class="li-you col-md-7 col-sm-7 col-xs-7">
+											<input type="text" class="inp inp1" placeholder="输入手机号码" id="telephone"/>
+										</div>
+									</li>
+									<li class="clearfix">
+										<div class="li-zuo col-md-5 col-sm-5 col-xs-5">
+											<from>
+												<input type="button" value="获取验证码" class="btn1" onclick="getSample(this)"/>
+											</from>
+										</div>
+										<div class="li-you col-md-7 col-sm-7 col-xs-7">
+											<input type="text" id="verify" class="inp inp1" placeholder="输入验证码"/>
+										</div>
+									</li>
+									<li class="clearfix">
+										<div class="li-zuo col-md-5 col-sm-5 col-xs-5">
+											<i>设置密码</i>
+										</div>
+										<div class="li-you col-md-7 col-sm-7 col-xs-7">
+											<input type="text" class="inp inp1" id="registerPassword"/>
+										</div>
+									</li>
+									<li class="clearfix">
+										<div class="li-zuo col-md-5 col-sm-5 col-xs-5">
+											<i>确认密码</i>
+										</div>
+										<div class="li-you col-md-7 col-sm-7 col-xs-7">
+											<input type="text" class="inp inp1" id="registerAffirmPassword"/>
+										</div>
+									</li>
+								</ul>
+								<a href="javascript:;" class="now" onclick="topUserRegister();">立即注册</a>
+								<span style="text-align: center;display: block;font-size: 14px;">已有账号<a href="login.html"  style="margin-left: 10px;color: red;">登录</a></span>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--主体-->
+		<!--尾部-->
+		<footer id="footer"></footer>
+		<!--尾部-->
+	</body>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+	<script src="js/jgestures.min.js"></script>
+	<script src="js/Share.js"></script>
+	<script type="text/javascript">
+		$.ajax({
+			type:"get",
+			url:"header.html",
+			success:function(data){
+				$("#header").html(data);
+			}
+		});
+		var flag = true;
+		function changeCheckbox(){
+			if(flag){
+				$(".comList_forCheckbox").attr("class","comList_forCheckbox glyphicon glyphicon-ok");
+				flag = false;
+			}else{
+				$(".comList_forCheckbox").attr("class","comList_forCheckbox");
+				flag = true;
+			}	
+		}
+		$("#two").on("change",function(){
+    		//国家区号
+			var zone = $("#two").find("option:selected").attr("text");
+			$("#b").val(zone);
+    		for(var i=0;i<$("#two option").length;i++){
+    			if($("#two option")[i].value == "guojia"){
+    				$("#two option")[i].remove();
+    			}
+			}
+    });
+	</script>
+	<script type="text/javascript">
+		
+    	/* $(".now").on("click",function(){
+    		checkPhone();
+    		if(checkPhone() == "true"){
+    			getSample(obj);
+    		}
+    	}) */
+    	
+    	//鼠标移开焦点事件
+    	$("#telephone").blur(function(){
+    		var phone = document.getElementById("telephone").value;
+    		if(!(/^1[34578]\d{9}$/.test(phone))){ 
+    	        alert("手机号码有误，请重填");
+    	        return;
+    		}
+    		//判断手机号码是否存在
+        	$.ajax({  
+    	         type : "post",  
+    	         url : "/app/loginAction.ered?reqCode=verification",  
+    	         data : {account:phone},  
+    	         async : false,  
+    	         success : function(data){  
+    	        	  var result = $.parseJSON(data); 
+    		   		  var status=result.status;
+    		   		  if(status == 1){
+    		   			  alert("账号已存在！");
+    		   			  
+    		   			  return;
+    		   		  }else{
+    		   			send(phone,obj);	   	   			
+    		   		  }
+    	         }  
+    	     });
+    	});
+    	
+    	
+    	//手机获取验证码
+	function getSample(obj) {
+		var phone = document.getElementById("telephone").value;
+		if(!(/^1[34578]\d{9}$/.test(phone))){ 
+	        alert("手机号码有误，请重填");
+	        return;
+		}
+      	//判断手机号码是否存在
+    	$.ajax({  
+	         type : "post",  
+	         url : "/app/loginAction.ered?reqCode=verification",  
+	         data : {account:phone},  
+	         async : false,  
+	         success : function(data){  
+	        	  var result = $.parseJSON(data); 
+		   		  var status=result.status;
+		   		  if(status == 1){
+		   			  alert("账号已存在！");
+		   			  
+		   			  return;
+		   		  }else{
+		   			send(phone,obj);	   	   			
+		   		  }
+	         }  
+	     });
+	}
+    	//发送短信
+    	function send(phone,obj){
+    		 $.post("/app/loginAction.ered?reqCode=getCode", {
+    				"phone" : phone
+    				}, function(result) {
+    					var result = $.parseJSON(result);
+    					alert(result.msg);
+    					gettime(obj);
+    			}); 
+    	}
+
+	var countdown = 60;
+	function gettime(obj) {
+		if (countdown == 0) {
+			$(obj).removeAttr("disabled");
+			$(obj).val("发送验证码");
+			countdown = 60;
+		} else {
+			$(obj).attr("disabled", "none");
+			$(obj).val("重新发送(" + countdown + ")");
+			countdown--;
+			setTimeout(function() {
+				gettime(obj)
+			}, 1000)
+		}
+	}
+	
+	
+	function topUserRegister(){
+		var phone = document.getElementById("telephone").value;
+		if(!(/^1[34578]\d{9}$/.test(phone))){ 
+	        alert("手机号码有误，请重填");
+	        return;
+		}
+      	//判断手机号码是否存在
+    	$.ajax({  
+	         type : "post",  
+	         url : "/app/loginAction.ered?reqCode=verification",  
+	         data : {account:phone},  
+	         async : false,  
+	         success : function(data){  
+	        	  var result = $.parseJSON(data); 
+		   		  var status=result.status;
+		   		  if(status == 1){
+		   			  alert("账号已存在！");
+		   			  return;
+		   		  }else{
+		   			var verify = $("#verify").val();
+		   			var ver = verify.replace(/\s/g, "");
+		   			if (verify.length == 0 || verify == " ") {
+		   				alert("验证码不能为空！");
+		   				return;
+		   			}
+		   			//密码
+		   			var resetPassword = $("#registerPassword").val();
+		   			var resetse = resetPassword.replace(/\s/g, "");
+		   			if (resetPassword.length == 0 || resetPassword == " "
+		   					|| resetse.length == 0) {
+		   				alert("密码不能为空！");
+		   				return;
+		   			}
+		   			//确认密码
+		   			var registerAffirmPassword = $("#registerAffirmPassword").val();
+		   			if (registerAffirmPassword.length == 0 || registerAffirmPassword == " ") {
+		   				alert("确认密码不能为空！");
+		   				return;
+		   			}
+
+		   			if ($("#registerAffirmPassword").val() != $("#registerPassword").val()) {
+		   				$(this).parent().find(".icon-remove-circle").show();
+		   				alert("两次密码输入不相同！");
+		   				return;
+		   			}
+		   					   			
+		   				$.post("/app/loginAction.ered?reqCode=register", {
+		   					account : phone,
+		   					verify : verify,
+		   					password : registerAffirmPassword
+		   				},
+		   						//$('#registerForm').serialize(),
+		   						
+		   						function(result) {
+		   							var result = $.parseJSON(result);
+		   							if (result.success) {
+		   								window.location.href = "index.html";
+		   							} else {
+		   								
+		   								if (result.errorType == "1") {
+		   									alert("帐号格式错误!");
+		   								} else if (result.errorType == "2") {
+		   									alert("密码格式错误!");
+		   								} else if (result.errorType == "3") {
+		   									alert("验证码错误!");
+		   								} else if (result.errorType == "4") {
+		   								}
+		   							}
+		   				});
+		   		  }
+	         }  
+	     });		
+	}
+	
+	</script>
+</html>

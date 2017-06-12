@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/Share.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7/dist/css/bootstrap.min.css"/>
+		<script src="/front/js/jQuery.js"></script>
+		<title>商城登录</title>
+	</head>
+	<body>
+		<!--头部-->
+		<header id="header"></header>
+		<!--头部-->
+		<!--右侧菜单-->
+		<div id="right-list"></div>
+		<!--右侧菜单-->
+		<!--主体-->
+		<div class="box">
+			<div class="container">
+				<div class="row">
+					<!-- <div class="login-left col-md-6 col-sm-6 hidden-xs ">
+						<h1>Life Watch</h1>
+						<h2>护卫生命，守候健康™</h2>
+						<p>Safeguard LIFE WATCH over Health™</p>
+					</div> -->
+					<div class="login-right col-md-6 col-sm-6 col-xs-12">
+						<span class="alive">在线登录</span>
+					<form method="post" id="loginForm" class=" scale-from-top in">
+						<div class="login-right-xia">
+							<ul>
+								<li id="loginAccount">
+									<span class="a"></span>
+									<input type="text" id="accounts" name="account" placeholder="请输入您的用户名" class="int"/>
+									<label for="account" title="用户名"><i class="icon icon-user"></i></label>
+	            					<span class="mylabel"><i class="icon icon-check-circle-o myiconhide" style="color: #00ff66;"></i></span>
+	            					<span class="mylabel"><i class="icon icon-remove-circle myiconhide" style="color: #EE0000;"></i></span>
+	            					<p class="help-text"></p>
+								</li>
+								<li id="loginPassword">
+									<span class="b"></span>
+									<input type="password" name="password" placeholder="请输入您的密码" class="int"/>
+									<label for="password" title="密码"><i class="icon icon-lock"></i></label>
+						            <span class="mylabel"><i class="icon icon-check-circle-o myiconhide" style="color: #00ff66;"></i></span>
+						            <span class="mylabel"><i class="icon icon-remove-circle myiconhide" style="color: #EE0000;"></i></span>
+						            <p class="help-text"></p>
+								</li>
+							</ul>
+														
+								<input type="submit" onclick="topUserLogin(this)" value="登录" class="submit"/>
+								<input type="checkbox" class="chk" id="chk"/><label for="chk" onclick="changeCheckbox()" class="comList_forCheckbox"></label><span>记住账号</span><a href="register.html">新用户注册！</a>
+							
+						</div>
+					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--主体-->
+		<!--尾部-->
+		<footer id="footer"></footer>
+		<!--尾部-->
+	</body>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+	<script src="js/jgestures.min.js"></script>
+	<script src="js/Share.js"></script>
+	<script>
+		$.ajax({
+			type:"get",
+			url:"header.html",
+			success:function(data){
+				$("#header").html(data);
+			}
+		});
+		var flag = true;
+		function changeCheckbox(){
+			if(flag){
+				$(".comList_forCheckbox").attr("class","comList_forCheckbox glyphicon glyphicon-ok");
+				flag = false;
+			}else{
+				$(".comList_forCheckbox").attr("class","comList_forCheckbox");
+				flag = true;
+			}	
+		}
+	</script>
+	<script type="text/javascript">
+	//登录
+	function topUserLogin(obj) {
+		var accounts = document.getElementById("accounts").value;
+		if(!(/^1[34578]\d{9}$/.test(accounts))){ 
+	        alert("手机号码有误，请重填");
+	        return;
+		}
+		
+		
+		
+		$(obj).attr("disabled", "none");
+		$(obj).text("Loading...");
+		$.post("/app/loginAction.ered?reqCode=login", $('#loginForm')
+				.serialize(), function(result) {
+			var result = $.parseJSON(result);
+			if (result.success) {
+				window.location.href = "index.html";
+			} else {
+				$(obj).removeAttr("disabled");
+				$(obj).text("登录");
+				$("#loginForm .myiconhide").hide();
+				$("#loginForm .has-error").removeClass("has-error");
+				$("#loginForm .help-text").empty();
+				if (result.errorType == "1") {
+					$("#loginAccount .icon-remove-circle").show();
+					$("#loginAccount").find(".help-text").text("此账号用户不存在！");
+					$("#loginAccount").addClass("has-error");
+				} else if (result.errorType == "2") {
+					$("#loginPassword .icon-remove-circle").show();
+					$("#loginPassword").find(".help-text").text("密码不正确！");
+					$("#loginPassword").addClass("has-error");
+				}
+			}
+		});
+	}
+	</script>
+</html>

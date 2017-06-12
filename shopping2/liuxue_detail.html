@@ -1,0 +1,459 @@
+<!-- <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Classic - Contact Page</title>
+<!--
+Classic Template
+http://www.cssmoban.com/tm-488-classic
+-->
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="http://fonts.useso.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="css/liuxue.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="css/templatemo-style1.css">                                   <!-- Templtemo style -->
+	<script src="js/jquery-1.3.2.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <![endif]-->
+     <script type="text/javascript">
+     
+     function userinfo(){
+     	var username = $("#username").val();
+     	var phone = $("#phone").val();
+     	var email = $("#email").val();
+     	var country = $("#country").val();
+     	var school = $("#school").val();
+     	var subject = $("#subject").val();
+     	var descption = $("#descption").val();
+     	var reg = /^1\d{10}$/;
+     	var str = username.replace(/\s+/g,""); 
+     	var pho = phone.replace(/\s+/g,"");
+     	var sho = school.replace(/\s+/g,"");
+		if(username =="" || str.length == 0) {
+			alert("姓名不能为空！");
+		}else if(phone =="" || pho.length == 0){
+			alert("手机号码不能为空！");
+		}else if(!reg.test(phone)){	
+			alert("手机号码输入不正确！");
+		}else if(school =="" || sho.length == 0){
+			alert("学校不能为空！");
+		}else{
+     	 if(username != "" && phone != "" && school != ""){
+		    	$.post("index.ered?reqCode=liuXue",
+		    		{"username":username,"phone":phone,email:email,country:country,school:school,subject:subject,descption:descption},
+		    		function(result){
+						var jsonStr = $.parseJSON(result);
+						alert(jsonStr.msg);
+						//layer.alert(jsonStr.msg);
+						if (jsonStr.success){
+							search();
+						}
+				});  	 	
+		    }else{
+		    	alert("请填写完整信息再提交！");
+		    }
+     	}
+     }
+     
+     
+     
+     
+     </script>
+</head>
+
+    <body>
+       
+        <div class="tm-header">
+            <div class="container-fluid">
+                <div class="tm-header-inner">
+                    <a href="javascript:;" class="navbar-brand tm-site-name">详情</a>
+                    
+                    <!-- navbar -->
+                    <nav class="navbar tm-main-nav">
+
+                        <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#tmNavbar">
+                            &#9776;
+                        </button>
+                        
+                        <div class="collapse navbar-toggleable-sm" id="tmNavbar">
+                            <ul class="nav navbar-nav">
+                            	<li class="nav-item">
+                                    <a href="index.html" class="nav-link">商城</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="liuxue.html" class="nav-link">首页</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a href="liuxue_detail.html" class="nav-link">详情</a>
+                                </li>
+                            </ul>                        
+                        </div>
+                        
+                    </nav>  
+
+                </div>                                  
+            </div>            
+        </div>
+
+        <div class="tm-contact-img-container">
+        
+        </div>
+
+        <section class="tm-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+
+                        <section>
+                            <h3 class="tm-gold-text tm-form-title">留学报名咨询表</h3>
+                            <!--<p class="tm-form-description">Vivamus accumsan blandit ligula. Sed lobortis efficitur sapien. Quisque vel sem eu turpis ullamcorper euismod. Praesent quis nisi ac augue luctus viverra. Sed et dui nisi. Fusce vitae dapibus justo.</p>--> 
+
+
+                            <form action="index.html" method="post" class="tm-contact-form">                                
+                                <div class="form-group">
+                                    <span style="color: green;">*</span><input type="text" id="username" name="username" class="form-control" placeholder="姓名"  required/>
+                                </div>
+                                <div class="form-group">
+                                    <span style="color: green;">*</span><input type="text" id="phone" name="phone" class="form-control" placeholder="手机"  required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="邮箱"  required/>
+                                </div>  
+                                <span style="color: green;">*</span>                             
+                                <div class="form-group">
+                                
+                                	<select name="country" id="country" style="height: 43px;width: 111px;">
+										 <option value="中国">中国</option>
+										 <option value="中非">中非</option>
+										 <option value="中华台北">中华台北</option>
+										 <option value="中国香港">中国香港</option>
+										 <option value="中国澳门">中国澳门</option>
+										 <option value="英国">英国</option>
+										 <option value="法国">法国</option>
+										 <option value="德国">德国</option>
+										 <option value="美国">美国</option>
+										 <option value="日本">日本</option>
+										 <option value="韩国">韩国</option>
+										 <option value="澳大利亚">澳大利亚</option>
+										 <option value="奥地利">奥地利</option>
+										 <option value="巴基斯坦">巴基斯坦</option>
+										 <option value="巴西">巴西</option>
+										 <option value="白俄罗斯">白俄罗斯</option>
+										 <option value="保加利亚">保加利亚</option>
+										 <option value="波兰">波兰</option>
+										 <option value="俄罗斯">俄罗斯</option>
+										 <option value="菲律宾">菲律宾</option>
+										 <option value="荷兰">荷兰</option>
+										 <option value="哈萨克斯坦">哈萨克斯坦</option>
+										 <option value="吉尔吉斯斯坦">吉尔吉斯斯坦</option>
+										 <option value="加拿大">加拿大</option>
+										 <option value="柬埔寨">柬埔寨</option>
+										 <option value="捷克">捷克</option>
+										 <option value="科威特">科威特</option>
+										 <option value="老挝">老挝</option>
+										 <option value="黎巴嫩">黎巴嫩</option>
+										 <option value="利比亚">利比亚</option>
+										 <option value="卢森堡">卢森堡</option>
+										 <option value="罗马尼亚">罗马尼亚</option>
+										 <option value="马达加斯加">马达加斯加</option>
+										 <option value="马来西亚">马来西亚</option>
+										 <option value="蒙古">蒙古</option>
+										 <option value="孟加拉">孟加拉</option>
+										 <option value="缅甸">缅甸</option>
+										 <option value="墨西哥">墨西哥</option>
+										 <option value="尼日尔">尼日尔</option>
+										 <option value="尼日利亚">尼日利亚</option>
+										 <option value="挪威">挪威</option>
+										 <option value="帕劳">帕劳</option>
+										 <option value="葡萄牙">葡萄牙</option>
+										 <option value="瑞士">瑞士</option>
+										 <option value="瑞典">瑞典</option>
+										 <option value="沙特阿拉伯">沙特阿拉伯</option>
+										 <option value="泰国">泰国</option>
+										 <option value="土耳其">土耳其</option>
+										 <option value="西班牙">西班牙</option>
+										 <option value="希腊">希腊</option>
+										 <option value="新加坡">新加坡</option>
+										 <option value="新西兰">新西兰</option>
+										 <option value="匈牙利">匈牙利</option>
+										 <option value="叙利亚">叙利亚</option>
+										 <option value="意大利">意大利</option>
+										 <option value="伊拉克">伊拉克</option>
+										 <option value="伊朗">伊朗</option>
+										 <option value="以色列">以色列</option>
+										 <option value="印度">印度</option>
+										 <option value="印度尼西亚">印度尼西亚</option>
+										 <option value="约旦">约旦</option>
+										 <option value="越南">越南</option>	
+										 <option value="英格兰">英格兰</option>
+									</select>
+                                	<input type="text" placeholder="学院" id="school" name="school" style="height: 43px; margin-left: 20px; display: inline-block;width: 529px;"/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="subject" name="subject" class="form-control" placeholder="科目"  required/>
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="descption" name="descption" class="form-control" rows="6" placeholder="信息" required></textarea>
+                                </div>
+                            	
+                                <button type="button" class="tm-btn" onclick="userinfo()">提交</button>                          
+                            </form>   
+                        </section>
+                        
+                        <section class="tm-margin-t-mid tm-map-section">
+                            <h3 class="tm-gold-text tm-form-title">《2017出国留学白皮书》发布</h3>
+
+                            <div id="google-map"><img src="img/tm-img-660x330-2.jpg"/></div>
+
+                            <p class="tm-form-description">2017年3月11日至26日，第79届澳际世界名校招生会将在全国29座城市陆续拉开帷幕。本届展会将以“留学，即刻出发”为主题，汇聚全球289所世界名校到场参展。届时，澳际教育集团旗下澳际留学、澳际移民、澳际英语学校、澳际国际学校、澳际海外办事处还将联合发布《2017出国留学白皮书》。</p>
+                            <p  class="tm-form-description">《2017出国留学白皮书》是澳际教育历时一年半时间，选取1000名留学客户作为抽样样本，并结合自身27年积累的十数万客户申请记录，从留学需求、学校及专业选择、语言培训、预科需求及境外服务等多个方面跟踪调查汇编而成，旨在为中国学生及留学家庭提供更有帮助的专业留学指导。</p>
+                            <p  class="tm-form-description">《2017出国留学白皮书》客观的呈现了中国留学生的整体情况，深度剖析了中国留学市场的行情及未来发展趋势，以帮助中国的准留学生们了解各国留学概况，准确把握留学市场动态，更加合理地规划出国留学方案。本书共分五章，分别为：中国留学综述、主要留学目的国现状及留学趋势、低龄留学现状及未来趋势、留学家庭需求解析及留学决策制定、留学后时代应对方案。</p>
+
+                            <!--<p class="m-b-0">美国研究生高端留学服务——SO计划，精心选择启德TOP10%全明星导师团，覆盖美国研究生申请全专业，集结美国TOP30学校申请经验，升级服务流程！获得部分美国院校录取者即有机会参与奖学金计划，相当于服务费全部返还！只为助力具有美国TOP30名校“野心”的你！（文中排名均根据美国2017年US NEWS大学排名）</p>-->
+							
+                            <!--<a href="javascript:;" class="tm-btn tm-margin-t-small">Detail</a>-->
+                        </section>                        
+                 
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-contact-right">
+                        
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="tm-aside-container">
+                                    <h3 class="tm-gold-text tm-title">
+                                        	2017英国商科高峰论坛
+                                    </h3>
+                                    <nav>
+                                        <!--<ul class="nav">
+                                            <li><span class="tm-text-link">2017英国商科高峰论坛</span></li>
+                                            <li><span class="tm-text-link">澳洲蒙纳士大学开放日</span></li>
+                                            <li><span class="tm-text-link">韩国留学四种住宿方式如何选择</span></li>
+                                            <li><span class="tm-text-link">Elementum egestas dui</span></li>
+                                            <li><span class="tm-text-link">Nam in augue consectetur</span></li>
+                                            <li><span class="tm-text-link">Text Link Color #006699</span></li>
+                                        </ul>-->
+                                        <span>商科作为中国学生赴英留学所选的第一大热门学科，但很多学生与家长对它的真实面目了解甚少。学生对于商科下面的专业细分，每个专业的课程设置，以及专业的不同职业发展目标都有或多或少的疑问。启德在每年咨询英国名校留学的黄金期，召开英国商科高峰论坛，为学生与广大家长，360度全面剖析英国商科。</span>
+                                    </nav>
+                                    <hr class="tm-margin-t-small">   
+                                    <h3 class="tm-gold-text tm-title tm-margin-t-small">
+                                        	禁韩令下如何看待韩国留学
+                                    </h3>
+                                    <nav>   
+                                        <!--<ul class="nav">
+                                            <li><span class="tm-text-link">Suspendisse sed dui nulla</span></li>
+                                            <li><span class="tm-text-link">Lorem ipsum dolor sit</span></li>
+                                            <li><span class="tm-text-link">Duiss nec purus et eros</span></li>
+                                            <li><span class="tm-text-link">Etiam pulvinar et ligula sed</span></li>
+                                            <li><span class="tm-text-link">Proin egestas eu felis et iaculis</span></li>
+                                            <li><span class="tm-text-link">Fusce non turpis euismod</span></li>
+                                        </ul>-->
+                                        <span>众所周知，广电总局的“禁韩令”让韩国娱乐业风声鹤唳。不过受损的不止韩国娱乐界，中国一大批影视公司也跟着流血，目前国内在播、待播的涉及韩国艺人的影视、综艺节目有几十部之多，都是付了款的......这一狙击将持续多久，据说可能会长达二十年！因为日剧就因为类似的原因，从九十年代后在中国变成“失去的二十年”，为韩剧腾出市场，这回韩剧也悲剧了！</span>
+                                    </nav>      
+                                </div>
+                                 
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                
+                                <div class="tm-content-box tm-content-box-contact">
+                                    <img src="img/tm-img-310x180-1.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
+                                    <h4 class="tm-margin-b-20 tm-gold-text">剑桥大学（University of Cambridge）</h4>
+                                    <p class="tm-margin-b-20 tm-p-small">位于英格兰的剑桥镇，是英国也是全世界最顶尖的大学之一。剑桥大学和牛津大学（University of Oxford）齐名为英国的两所最优秀的大学，被合称为“牛桥（Oxbridge）”，英国许多著名的科学家、作家、政治家都来自这所大学。</p>
+                                    <!--<a href="javascript:;" class="tm-btn text-uppercase">Detail</a>-->    
+                                </div> 
+
+                                <div class="tm-content-box tm-margin-t-mid tm-content-box-contact">
+                                    <img src="img/tm-img-310x180-2.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
+                                    <h4 class="tm-margin-b-20 tm-gold-text">麻省理工学院（Massachusetts Institute of Technology）</h4>
+                                    <p class="tm-margin-b-20 tm-p-small">简称麻省理工（MIT），坐落于美国马萨诸塞州剑桥市（大波士顿地区）[2]  ，是世界著名私立研究型大学。</p>
+                                    <!--<a href="javascript:;" class="tm-btn text-uppercase">Read More</a>-->    
+                                </div>  
+
+                            </div>
+                        </div>
+                        <hr class="tm-margin-t-mid">
+                        <div class="row tm-contact-row-related-posts">
+                            <div class="col-xs-12">
+                                
+                                <div class="tm-contact-related-posts-container">
+                                    <h3 class="tm-gold-text tm-title tm-margin-b-30">资深团队</h3>
+                                    <div class="media tm-related-post">
+                                      <div class="media-left media-middle">
+                                        <a href="javascript:;">
+                                          <img class="media-object" src="img/tm-img-240x120-1.jpg" alt="Generic placeholder image">
+                                        </a>
+                                      </div>
+                                      <div class="media-body">
+                                        <a href="javascript:;"><h4 class="media-heading tm-gold-text tm-margin-b-15">Lloyd Peterson 耶鲁大学前招生官</h4></a>
+                                        <p class="tm-small-font tm-media-description">我的工作经历：耶鲁大学前高级招生官，美国大学升学顾问联盟资深成员，常春藤联盟及姐妹学校财政资助招生联合委员前主席。</p>
+                                      </div>
+                                    </div>
+                                    <div class="media tm-related-post">
+                                      <div class="media-left media-middle">
+                                        <a href="javascript:;">
+                                          <img class="media-object" src="img/tm-img-240x120-2.jpg" alt="Generic placeholder image">
+                                        </a>
+                                      </div>
+                                      <div class="media-body">
+                                        <a href="javascript:;"><h4 class="media-heading tm-gold-text tm-margin-b-15">Willie Dixon 杜克大学前招生官</h4></a>
+                                        <p class="tm-small-font tm-media-description">我的工作经历：哈佛、斯坦福、宾大、乔治城、杜克五校招生官联盟 exploring college options 的主办人，在美国大学招生界有着极高的声望。</p>
+                                      </div>
+                                    </div>
+                                    <div class="media tm-related-post">
+                                      <div class="media-left media-middle">
+                                        <a href="javascript:;">
+                                          <img class="media-object" src="img/tm-img-240x120-3.jpg" alt="Generic placeholder image">
+                                        </a>
+                                      </div>
+                                      <div class="media-body">
+                                        <a href="javascript:;"><h4 class="media-heading tm-gold-text tm-margin-b-15">陈起永 VIP留学申请顾问</h4></a>
+                                        <p class="tm-small-font tm-media-description">我的工作经历：董事长兼总裁，北京大学本科及硕士毕业，后获得西北大学PhD Fellowship全奖赴美留学，现为美国西北大学及哈佛大学校友。</p>
+                                      </div>
+                                    </div>
+                                    <div class="media tm-related-post">
+                                      <div class="media-left media-middle">
+                                        <a href="javascript:;">
+                                          <img class="media-object" src="img/tm-img-240x120-4.jpg" alt="Generic placeholder image">
+                                        </a>
+                                      </div>
+                                      <div class="media-body">
+                                        <a href="javascript:;"><h4 class="media-heading tm-gold-text tm-margin-b-15">许老师 红钻留学申请顾问</h4></a>
+                                        <p class="tm-small-font tm-media-description">我的工作经历：美国本科和高中资深申请顾问、钻石导师及本科部主管;擅长美国本科综合性大学、文理学院及奖学金申请</p>
+                                      </div>
+                                    </div>
+                                </div>                                
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <footer class="tm-footer">
+            <div class="container-fluid">
+                <div class="row">
+                	
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        <div class="tm-footer-content-box tm-footer-links-container">
+                        
+                            <h3 class="tm-gold-text tm-title tm-footer-content-box-title">留学服务</h3>
+                            <nav>
+                                <ul class="nav">
+                                    <li><a href="javascript:;" class="tm-footer-link">本科留学申请</a></li>
+                                    <li><a href="javascript:;" class="tm-footer-link">研究生留学申请</a></li>
+                                    <li><a href="javascript:;" class="tm-footer-link">高中留学申请</a></li>
+                                    <li><a href="javascript:;" class="tm-footer-link">本科转学申请</a></li>
+                                    <li><a href="javascript:;" class="tm-footer-link">官方微博</a></li>
+                                    <li><a href="javascript:;" class="tm-footer-link">关于我们</a></li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                        
+                    </div>
+
+                    <!-- Add the extra clearfix for only the required viewport 
+                        http://stackoverflow.com/questions/24590222/bootstrap-3-grid-with-different-height-in-each-item-is-it-solvable-using-only
+                    -->
+                    <div class="clearfix hidden-lg-up"></div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+
+                        <div class="tm-footer-content-box">
+                        
+                            <h3 class="tm-gold-text tm-title tm-footer-content-box-title">Fusce non turpis</h3>
+                            <div class="tm-margin-b-30">
+                                <img src="img/tm-img-100x100-1.jpg" alt="Image" class="tm-footer-thumbnail">
+                                <img src="img/tm-img-100x100-2.jpg" alt="Image" class="tm-footer-thumbnail">
+                                <img src="img/tm-img-100x100-3.jpg" alt="Image" class="tm-footer-thumbnail">
+                                <img src="img/tm-img-100x100-4.jpg" alt="Image" class="tm-footer-thumbnail">
+                                <img src="img/tm-img-100x100-5.jpg" alt="Image" class="tm-footer-thumbnail">
+                                <img src="img/tm-img-100x100-6.jpg" alt="Image" class="tm-footer-thumbnail">
+                            </div>
+                            <!--<p class="tm-margin-b-20">Curabitur dui massa, aliquam quis mi sed, tempor vulputate tellus. Sed vestibulum non neque.</p>-->
+                            <!--<a href="javascript:;" class="tm-btn tm-btn-gray text-uppercase">Browse</a>-->
+
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 tm-copyright-col">
+                        <p class="tm-copyright-text">Copyright 2016 Your Company Name</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- load JS files -->
+        <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
+        <script src="js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
+        <!--<script>     
+       
+            /* Google map
+            ------------------------------------------------*/
+            var map = '';
+            var center;
+
+            function initialize() {
+                var mapOptions = {
+                    zoom: 16,
+                    center: new google.maps.LatLng(13.758468,100.567481),
+                    scrollwheel: false
+                };
+            
+                map = new google.maps.Map(document.getElementById('google-map'),  mapOptions);
+
+                google.maps.event.addDomListener(map, 'idle', function() {
+                  calculateCenter();
+                });
+            
+                google.maps.event.addDomListener(window, 'resize', function() {
+                  map.setCenter(center);
+                });
+            }
+
+            function calculateCenter() {
+                center = map.getCenter();
+            }
+
+            function loadGoogleMap(){
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' + 'callback=initialize';
+                document.body.appendChild(script);
+            }
+        
+            // DOM is ready
+            $(function() {
+
+                // Google Map
+                loadGoogleMap();
+            });
+
+        </script>             -->
+
+</body>
+</html>
